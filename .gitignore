@@ -17,6 +17,3 @@ Session.vim
 *.elc
 .zshrc.local
 samples
-
-.vim/bundle/
-
