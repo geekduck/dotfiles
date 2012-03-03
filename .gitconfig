@@ -14,3 +14,4 @@
   token = 8082cd17140c36424c411821505ec1a7
 [core]
   excludesfile = ~/.gitignore  # globalな.gitignoreの指定
+  editor = emacs
