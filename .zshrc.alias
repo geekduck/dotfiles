@@ -6,6 +6,9 @@ alias ll="ls -l"
 # diff
 alias diff=colordiff
 
+# vi
+alias vi=vim
+
 # du
 alias du="du -h"
 alias df="df -h"

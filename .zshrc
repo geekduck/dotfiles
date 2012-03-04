@@ -120,7 +120,7 @@ zstyle ':completion:*' group-name ''
 autoload -U compinit && compinit
 
 # perlbrew
-source ~/.perlbrew/etc/bashrc
+[[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source ~/.perlbrew/etc/bashrc
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
