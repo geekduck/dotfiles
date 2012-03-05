@@ -141,3 +141,6 @@ case "${OSTYPE}" in
     [ -f ~/dotfiles/.zshrc.linux ] && source ~/dotfiles/.zshrc.linux
     ;;
 esac
+
+# ローカル固有設定
+[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
