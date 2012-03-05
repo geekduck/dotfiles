@@ -19,3 +19,6 @@ export CVS_RSH=ssh
 
 # less
 export LESS='-R'
+
+# EDITOR
+export EDITOR='emacs -nw'

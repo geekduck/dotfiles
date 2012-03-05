@@ -9,6 +9,9 @@ alias diff=colordiff
 # vi
 alias vi=vim
 
+# less
+alias less='less -M'
+
 # du
 alias du="du -h"
 alias df="df -h"

@@ -1,7 +1,6 @@
 ; ロードパス
 (setq load-path (append (list
-                         (expand-file-name "~/.emacs")
-                         (expand-file-name "/usr/local/Cellar/emacs/23.3b/share/emacs/site-lisp/")
+                         (expand-file-name "~/.emacs.d")
                          )
                         load-path))
 
