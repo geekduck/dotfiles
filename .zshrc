@@ -43,11 +43,11 @@ case ${UID} in
         #
         setopt prompt_subst
         #PROMPT='${fg[white]}%(5~,%-2~/.../%2~,%~)% ${RED} $ ${RESET}'
-        PROMPT='${RESET}${GREEN}${WINDOW:+"[$WINDOW]"}${RESET}%{$fg_bold[blue]%}${USER}@%m${RESET}${WHITE}$ ${RESET}'
-        RPROMPT='${RESET}${WHITE}[${BLUE}%(5~,%-2~/.../%2~,%~)% ${WHITE}]${WINDOW:+"[$WINDOW]"} ${RESET}'
+        PROMPT='${RESET}${GREEN}${WINDOW:+"[$WINDOW]"}${RESET}%{$fg_bold[cyan]%}${USER}@%m${RESET}${WHITE}$ ${RESET}'
+        RPROMPT='${RESET}${WHITE}[${CYAN}%(5~,%-2~/.../%2~,%~)% ${WHITE}]${WINDOW:+"[$WINDOW]"} ${RESET}'
 
-        # Ä¾Á°¤Î¥³¥Ş¥ó¥É¤Î½ªÎ»¥¹¥Æ¡¼¥¿¥¹¤¬0°Ê³°¤Î¤È¤­¤ÏÀÖ¤¯¤¹¤ë¡£
-        # ${MY_MY_PROMPT_COLOR}¤Ïprecmd¤ÇÊÑ²½¤µ¤»¤Æ¤¤¤ë¿ôÃÍ¡£
+        # ç›´å‰ã®ã‚³ãƒãƒ³ãƒ‰ã®çµ‚äº†ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãŒ0ä»¥å¤–ã®ã¨ãã¯èµ¤ãã™ã‚‹ã€‚
+        # ${MY_MY_PROMPT_COLOR}ã¯precmdã§å¤‰åŒ–ã•ã›ã¦ã„ã‚‹æ•°å€¤ã€‚
         local MY_COLOR="$ESCX"'%(0?.${MY_PROMPT_COLOR}.31)'m
         local NORMAL_COLOR="$ESCX"m
 
@@ -64,10 +64,10 @@ case ${UID} in
 
         autoload -Uz is-at-least
         if is-at-least 4.3.10; then
-        # ¤³¤Î check-for-changes ¤¬º£²ó¤ÎÀßÄê¤¹¤ë¤È¤³¤í
+        # ã“ã® check-for-changes ãŒä»Šå›ã®è¨­å®šã™ã‚‹ã¨ã“ã‚
             zstyle ':vcs_info:git:*' check-for-changes true
-            zstyle ':vcs_info:git:*' stagedstr "+"    # Å¬Åö¤ÊÊ¸»úÎó¤ËÊÑ¹¹¤¹¤ë
-            zstyle ':vcs_info:git:*' unstagedstr "-"  # Å¬Åö¤ÎÊ¸»úÎó¤ËÊÑ¹¹¤¹¤ë
+            zstyle ':vcs_info:git:*' stagedstr "+"    # é©å½“ãªæ–‡å­—åˆ—ã«å¤‰æ›´ã™ã‚‹
+            zstyle ':vcs_info:git:*' unstagedstr "-"  # é©å½“ã®æ–‡å­—åˆ—ã«å¤‰æ›´ã™ã‚‹
             zstyle ':vcs_info:git:*' formats '(%s)-[%b%c%u]'
             zstyle ':vcs_info:git:*' actionformats '(%s)-[%b%c%u|%a]'
         fi
@@ -100,12 +100,12 @@ case ${UID} in
 esac
 
 # Set shell options
-# Í­¸ú¤Ë¤·¤Æ¤¢¤ë¤Î¤ÏÉûºîÍÑ¤Î¾¯¤Ê¤¤¤â¤Î
+# æœ‰åŠ¹ã«ã—ã¦ã‚ã‚‹ã®ã¯å‰¯ä½œç”¨ã®å°‘ãªã„ã‚‚ã®
 setopt auto_cd auto_remove_slash auto_name_dirs 
 setopt extended_history hist_ignore_dups hist_ignore_space prompt_subst
 setopt extended_glob list_types no_beep always_last_prompt
 setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
-# ÊØÍø¤À¤¬ÉûºîÍÑ¤Î¶¯¤¤¤â¤Î¤Ï¥³¥á¥ó¥È¥¢¥¦¥È
+# ä¾¿åˆ©ã ãŒå‰¯ä½œç”¨ã®å¼·ã„ã‚‚ã®ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
 #setopt auto_menu  correct rm_star_silent sun_keyboard_hack
 #setopt share_history inc_append_history
 
@@ -114,7 +114,7 @@ bindkey -e
 #bindkey '^p'	history-beginning-search-backward
 #bindkey '^n'	history-beginning-search-forward
 
-# Êä´°¥·¥¹¥Æ¥à¤òÍøÍÑ: Êä´°¤ÎµóÆ°¤¬Ê¬¤«¤ê¤ä¤¹¤¯¤Ê¤ë2¤Ä¤ÎÀßÄê¤Î¤ßµ­½Ò
+# è£œå®Œã‚·ã‚¹ãƒ†ãƒ ã‚’åˆ©ç”¨: è£œå®Œã®æŒ™å‹•ãŒåˆ†ã‹ã‚Šã‚„ã™ããªã‚‹2ã¤ã®è¨­å®šã®ã¿è¨˜è¿°
 zstyle ':completion:*' format '%BCompleting %d%b'
 zstyle ':completion:*' group-name ''
 autoload -U compinit && compinit
@@ -125,19 +125,19 @@ autoload -U compinit && compinit
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-# aliasÀßÄê¥Õ¥¡¥¤¥ë¤òÆÉ¤ß¹ş¤à
+# aliasè¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€
 [ -f ~/dotfiles/.zshrc.alias ] && source ~/dotfiles/.zshrc.alias
 
-# OSËè¤ÎÀßÄê
+# OSæ¯ã®è¨­å®š
 case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
-    # ¤³¤³¤ËÀßÄê
+    # ã“ã“ã«è¨­å®š
     [ -f ~/dotfiles/.zshrc.osx ] && source ~/dotfiles/.zshrc.osx
     ;;
     # Linux
     linux*)
-    # ¤³¤³¤ËÀßÄê
+    # ã“ã“ã«è¨­å®š
     [ -f ~/dotfiles/.zshrc.linux ] && source ~/dotfiles/.zshrc.linux
     ;;
 esac
