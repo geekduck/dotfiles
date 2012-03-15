@@ -10,6 +10,11 @@ abbreviations=(
 	"HEAD^^^"   "HEAD\\^\\^\\^"
 	"HEAD^^^^"  "HEAD\\^\\^\\^\\^\\^"
 	"HEAD^^^^^" "HEAD\\^\\^\\^\\^\\^"
+	"head^"     "HEAD\\^"
+	"head^^"    "HEAD\\^\\^"
+	"head^^^"   "HEAD\\^\\^\\^"
+	"head^^^^"  "HEAD\\^\\^\\^\\^\\^"
+	"head^^^^^" "HEAD\\^\\^\\^\\^\\^"
 )
 
 magic-abbrev-expand () {
