@@ -6,7 +6,8 @@
 #
 #####################################################################
 
-limit coredumpsize 0
+# cygwin以外ならcoredumpsizeを設定
+[ $OSTYPE != "cygwin" ] && limit coredumpsize 0
 # Setup command search path
 typeset -U path
 # (N-/) を付けることで存在しなければ無視してくれる

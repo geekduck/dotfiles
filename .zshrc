@@ -119,8 +119,11 @@ zstyle ':completion:*' format '%BCompleting %d%b'
 zstyle ':completion:*' group-name ''
 autoload -U compinit && compinit
 
+# git用の設定
+[[ -s "$HOME/dotfiles/.zshrc.git" ]] && source "$HOME/dotfiles/.zshrc.git"
+
 # perlbrew
-[[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source ~/.perlbrew/etc/bashrc
+[[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source "$HOME/.perlbrew/etc/bashrc"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
