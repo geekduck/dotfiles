@@ -5,10 +5,10 @@
                         load-path))
 
 ; site-lisp
-
+(global-linum-mode t)
 ;; wb-line-number-toggle
-(require 'wb-line-number)
-(wb-line-number-toggle)
+;(require 'wb-line-number)
+;(wb-line-number-toggle)
 
 ;; haskell-mode
 (load "haskell-mode/haskell-site-file")
