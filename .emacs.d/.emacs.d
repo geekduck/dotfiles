@@ -1,1 +1,0 @@
-/Users/duck1218/dotfiles/.emacs.d
