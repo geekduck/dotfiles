@@ -33,7 +33,6 @@ alias copy='cp -ip' del='rm -i' move='mv -i'
 alias fullreset='echo "\ec\ec"'
 h ()  		      {history $* | less}
 alias ja='LANG=ja_JP.eucJP XMODIFIERS=@im=kinput2'
-alias ls='ls -F' la='ls -a' ll='ls -la'
 mdcd ()	     	 {mkdir -p "$@" && cd "$*[-1]"}
 mdpu ()		 	{mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
@@ -68,3 +67,6 @@ extract () {
   fi
 }
 alias ex='extract'
+
+# procces grep
+alias pg='ps aux | grep '
