@@ -10,7 +10,8 @@
   interactive = auto
   grep = auto
 [core]
-  excludesfile = /Users/duck1218/.gitignore
+  quotepath = false
+  excludesfile = $HOME/.gitignore
   editor = emacs
   pager = lv -c -Au8
 [difftool "sourcetree"]
