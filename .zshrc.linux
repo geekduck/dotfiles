@@ -18,4 +18,4 @@ export INFOPATH
 #export MAVEN_OPTS=-Xmx1024M
 
 # alias
-aliap emacs='emacs -nw'
+alias emacs='emacs -nw'
