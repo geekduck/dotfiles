@@ -1,30 +1,12 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin/:~/bin:$PATH
-
-# osx alias
-alias pbc='pbcopy'
-
 # Terminal Colorの設定
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Java
-#export JAVA_HOME=/Library/Java/Home
-#export PATH=$JAVA_HOME/bin:$PATH
-# デフォルトエンコーディングSJISをUTF-8へ
-#export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
-
-# Ant
-#export ANT_VERSION=1.8.0
-#export ANT_HOME=~/dev/Tools/apache-ant-${ANT_VERSION}
-#export ANT_OPTS=-Xmx1g
-#export PATH=$ANT_HOME/bin:$PATH
-
-# Maven2
-#export MAVEN_VERSION=2.2.1
-#export MAVEN_HOME=~/dev/Tools/apache-maven-${MAVEN_VERSION}
-#export PATH=$MAVEN_HOME/bin:$PATH
-#export MAVEN_OPTS=-Xmx1024M
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export JAVA_OPTS="-Dfile.encoding=utf-8"
+alias javac='javac -J-Dfile.encoding=UTF-8'
+alias java='java -Dfile.encoding=UTF-8'
 
 # man path
 MANPATH=/usr/local/man:$MANPATH
