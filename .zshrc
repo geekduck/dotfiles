@@ -1,6 +1,6 @@
 #####################################################################
 #
-#  Sample .zshrc file
+#  .zshrc file
 #  initial setup file for only interactive zsh
 #  This file is read after .zshenv file is read.
 #

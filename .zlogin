@@ -1,6 +1,6 @@
 ##################################################################
 #
-#  Sample .zlogin file
+#  .zlogin file
 #
 #  Read in after the .zshrc file when you log in.
 #  Not read in for subsequent shells.  For setting up
@@ -9,7 +9,11 @@
 ##################################################################
 
 # Global but interactive-use only variables
-manpath=(/usr/*/man(N-/) /usr/local/*/man(N-/) /var/*/man(N-/))
+manpath=(
+    /usr/*/man(N-/)
+    /usr/local/*/man(N-/)
+    /var/*/man(N-/)
+)
 export MANPATH
 #export LESS='-iscj5'
 export JLESSCHARSET=japanese

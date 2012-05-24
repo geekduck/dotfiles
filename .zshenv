@@ -1,6 +1,6 @@
 #####################################################################
 #
-#  Sample .zshenv file
+#  .zshenv file
 #
 #  initial setup file for both interactive and noninteractive zsh
 #
@@ -11,7 +11,13 @@
 # Setup command search path
 typeset -U path
 # (N-/) を付けることで存在しなければ無視してくれる
-path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/))
+path=(
+    /usr/*/bin(N-/)
+    /usr/local/*/bin(N-/)
+    /usr/local/*/share(N-/)
+    /var/*/bin(N-/)
+    $path
+)
 
 ## export
 # 言語設定
