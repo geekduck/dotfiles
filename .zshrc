@@ -120,7 +120,7 @@ zstyle ':completion:*' group-name ''
 autoload -U compinit && compinit
 
 # git用の設定
-[[ -s "$HOME/dotfiles/.zshrc.git" ]] && source "$HOME/dotfiles/.zshrc.git"
+[[ -s "$HOME/.zshrc.git" ]] && source "$HOME/.zshrc.git"
 
 # perlbrew
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source "$HOME/.perlbrew/etc/bashrc"

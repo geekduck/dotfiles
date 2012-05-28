@@ -1,10 +1,10 @@
 #!/bin/bash
 
-DOT_FILES=( .zshrc .zshrc.alias .zshenv .zlogin .gitconfig .gitignore .tmux.conf .dir_colors .emacs.d)
+DOT_FILES=( .zshrc .zshrc.alias .zshrc.git .zshenv .zlogin .gitconfig .gitignore .tmux.conf .dir_colors .emacs.d)
 
 for file in ${DOT_FILES[@]}
 do
-    [ -s $HOME/$file ]  || ln -s `pwd`/$file $HOME/$file
+    ( [ -s $HOME/$file ] || [ -d $HOME/$file ] )  || ln -s `pwd`/$file $HOME/$file
 done
 
 # OS毎の設定
