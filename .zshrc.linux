@@ -19,3 +19,4 @@ export INFOPATH
 
 # alias
 alias emacs='emacs -nw'
+alias redcar='redcar --ignore-stdin --fork'
