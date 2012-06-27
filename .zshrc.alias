@@ -37,11 +37,6 @@ mdcd ()	     	 {mkdir -p "$@" && cd "$*[-1]"}
 mdpu ()		 	{mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
 
-# Suffix aliases(起動コマンドは環境によって変更する)
-alias -s pdf=acroread dvi=xdvi 
-alias -s {odt,ods,odp,doc,xls,ppt}=soffice
-alias -s {tgz,lzh,zip,arc}=file-roller
-
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
 extract () {
   if [ -f $1 ] ; then
