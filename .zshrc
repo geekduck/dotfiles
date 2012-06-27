@@ -125,12 +125,6 @@ autoload -U compinit && compinit
 # perlbrew
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source "$HOME/.perlbrew/etc/bashrc"
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-# rbenv
-[[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
-
 # alias設定ファイルを読み込む
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 

@@ -33,3 +33,6 @@ export LESS='-R'
 
 # EDITOR
 export EDITOR='emacs -nw'
+
+# rbenv
+[[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
