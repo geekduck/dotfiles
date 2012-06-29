@@ -22,7 +22,7 @@ alias emacs='emacs -nw'
 alias redcar='redcar --ignore-stdin --fork'
 
 # emacs
-alias estart='emacss --daemon'
+alias estart='emacs --daemon'
 alias emacst='emacsclient -t'
 alias emacsc='emacsclient -c'
 alias kill-emacs="emacsclient -e '(kill-emacs)'"
