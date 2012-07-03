@@ -19,3 +19,6 @@ alias estart='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
 alias emacst='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
 alias emacsc='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c &'
 alias kill-emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -e '(kill-emacs)'"
+
+# Homebrwe
+alias bu='brew update&&brew upgrade'
