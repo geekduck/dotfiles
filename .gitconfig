@@ -11,7 +11,7 @@
   grep = auto
 [core]
   quotepath = false
-  excludesfile = $HOME/.gitignore
+  excludesfile = ~/.gitignore
   editor = emacs
   pager = lv -c -Au8
 [difftool "sourcetree"]

@@ -18,3 +18,7 @@ Session.vim
 .zshrc.local
 samples
 *.dat
+*.iml
+*.ipr
+*.iws
+.idea/
