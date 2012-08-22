@@ -68,6 +68,7 @@ alias pg='ps aux | grep '
 
 # global alias
 alias -g L="| less -M"
+alias -g LV="| $PAGER"
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'

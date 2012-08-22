@@ -34,5 +34,8 @@ export LESS='-R'
 # EDITOR
 export EDITOR='emacs -nw'
 
+# PAGER
+export PAGER='lv -c -Au8'
+
 # rbenv
 [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
