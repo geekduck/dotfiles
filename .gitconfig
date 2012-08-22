@@ -1,22 +1,22 @@
 [user]
-  name = geek_duck
-  email = define.oneself@gmail.com
+	name = def-my
+	email = define.oneself@gmail.com
 [color]
-  # colorの設定(以下のコマンドは自動で色つける)
-  ui = auto
-  status = auto
-  diff = auto
-  branch = auto
-  interactive = auto
-  grep = auto
+	# colorの設定(以下のコマンドは自動で色つける)
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
 [core]
-  quotepath = false
-  excludesfile = ~/.gitignore
-  editor = emacs
-  pager = lv -c -Au8
+	quotepath = false
+	excludesfile = /Users/duck1218/.gitignore
+	editor = emacs
+	pager = lv -c -Au8
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
