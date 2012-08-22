@@ -65,3 +65,9 @@ alias ex='extract'
 
 # procces grep
 alias pg='ps aux | grep '
+
+# global alias
+alias -g L="| less -M"
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
