@@ -39,3 +39,7 @@ export PAGER='lv -c -Au8'
 
 # rbenv
 [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+
+# nodebrew
+[[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
