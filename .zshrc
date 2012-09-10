@@ -125,6 +125,9 @@ autoload -U compinit && compinit
 # perlbrew
 [[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source "$HOME/.perlbrew/etc/bashrc"
 
+# pythonz
+[[ -s "$HOME/.pythonz/etc/bashrc" ]] && source "$HOME/.pythonz/etc/bashrc" && export "PATH=$HOME/.pythonz/pythons/default/bin:$PATH"
+
 # alias設定ファイルを読み込む
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 
