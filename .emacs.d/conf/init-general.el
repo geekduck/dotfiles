@@ -1,5 +1,8 @@
 ;; 一般的な設定
 
+;; utf-8
+(set-language-environment 'utf-8)
+
 ;; C-h をバックスペースに
 (keyboard-translate ?\C-h ?\C-?)
 
