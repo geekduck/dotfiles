@@ -15,6 +15,7 @@ INFOPATH=/usr/local/info:$INFOPATH
 export INFOPATH
 
 # emacs
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias estart='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
 alias emacst='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
 alias emacsc='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c &'
