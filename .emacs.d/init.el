@@ -15,6 +15,12 @@
 ;; 引数のディレクトリとそのサブディレクトリをload-path に追加
 (add-to-load-path "elisp" "conf" "public_repos")
 
+;; ELPA用のリポジトリを追加
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;; 基本設定
 (load "init-general")
 
