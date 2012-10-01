@@ -9,3 +9,13 @@
   (setq undo-limit 60000)
   (setq undo-strong-limit 90000)
   )
+
+;; js2-mode
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.\\(js\\|json\\)$" . js2-mode))
+
+;; auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete/dict/")
+(ac-config-default)
+
