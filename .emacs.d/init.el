@@ -26,16 +26,5 @@
 
 ;; site-lisp
 
-;; auto-install の設定
-(when (require 'auto-install nil t)
-  ;; インストールディレクトリ
-  (setq auto-install-directory "~/.emacs.d/elisp")
-  ;; EmacsWikiに登録されているelisp の名前を取得
-  (auto-install-update-emacswiki-package-name t)
-  ;; プロキシ設定
-  ;; (setq url-proxy-services '(("http", "localhost:8339")))
-  ;; install-elisp の関数を利用可能に
-  (auto-install-compatibility-setup))
-
 ;; 拡張機能の読み込み
 (load "init-elisp")
