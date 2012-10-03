@@ -12,6 +12,9 @@ alias vi=vim
 # less
 alias less='less -M'
 
+# lv
+alias lv='lv -c -Au8'
+
 # du
 alias du="du -h"
 alias df="df -h"
