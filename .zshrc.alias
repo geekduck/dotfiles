@@ -6,6 +6,9 @@ alias ll="ls -l"
 # diff
 alias diff=colordiff
 
+# which
+alias which=/usr/bin/which
+
 # vi
 alias vi=vim
 
