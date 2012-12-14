@@ -129,19 +129,19 @@ autoload -U compinit && compinit
 [[ -s "$HOME/.pythonz/etc/bashrc" ]] && source "$HOME/.pythonz/etc/bashrc" && export "PATH=$HOME/.pythonz/pythons/default/bin:$PATH"
 
 # alias設定ファイルを読み込む
-[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
+[ -f ~/.zshrc.alias ] && source "$HOME/.zshrc.alias"
 
 # OS毎の設定
 case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
       # ここに設定
-      [ -f ~/.zshrc.osx ] && source ~/.zshrc.osx
+      [ -f ~/.zshrc.osx ] && source "$HOME/.zshrc.osx"
       ;;
     # Linux
     linux*)
       # ここに設定
-      [ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
+      [ -f ~/.zshrc.linux ] && source "$HOME/.zshrc.linux"
       ;;
 esac
 
