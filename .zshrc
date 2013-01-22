@@ -9,7 +9,6 @@
 ###
 # Set Shell variable
 # WORDCHARS=$WORDCHARS:s,/,,
-HISTSIZE=200 HISTFILE=~/.zhistory SAVEHIST=180
 
 ## Default shell configuration
 #
@@ -102,17 +101,35 @@ esac
 # Set shell options
 # 有効にしてあるのは副作用の少ないもの
 setopt auto_cd auto_remove_slash auto_name_dirs 
-setopt extended_history hist_ignore_dups hist_ignore_space prompt_subst
+setopt auto_pushd prompt_subst
 setopt extended_glob list_types no_beep always_last_prompt
 setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
+setopt nolistbeep
+# 副作用強い
+setopt auto_menu correct
 # 便利だが副作用の強いものはコメントアウト
-#setopt auto_menu  correct rm_star_silent sun_keyboard_hack
-#setopt share_history inc_append_history
+#setopt rm_star_silent sun_keyboard_hack
 
 # binding keys
 bindkey -e
-#bindkey '^p'	history-beginning-search-backward
-#bindkey '^n'	history-beginning-search-forward
+
+### 履歴
+# 履歴設定
+HISTFILE=~/.zhistory
+HISTSIZE=600000
+SAVEHIST=600000
+setopt extended_history
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt share_history
+setopt inc_append_history
+# 履歴検索設定
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^p'    history-beginning-search-backward
+bindkey '^n'    history-beginning-search-forward
+
 
 # 補完システムを利用: 補完の挙動が分かりやすくなる2つの設定のみ記述
 zstyle ':completion:*' format '%BCompleting %d%b'
