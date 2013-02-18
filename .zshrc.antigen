@@ -9,7 +9,7 @@ if [ -s "$HOME/.antigen.zsh" ]; then
     source "$HOME/.antigen.zsh"
 
     ## load oh-my-zsh
-    #antigen-lib
+    antigen-lib
 
     ## oh-my-zsh系プラグイン
     #antigen-bundle git
