@@ -1,20 +1,41 @@
-#############################################
-## zshプラグインマネージャー antigenの設定 ##
-#############################################
+###############################################
+#
+# zshプラグインマネージャー antigenの設定
+#
+###############################################
 
 if [ -s "$HOME/.antigen.zsh" ]; then
     ## antigenの読み込み
     source "$HOME/.antigen.zsh"
 
+    ## load oh-my-zsh
+    #antigen-lib
+
     ## oh-my-zsh系プラグイン
-    antigen-bundle git
-    antigen-bundle pip
-    antigen-bundle command-not-found
+    #antigen-bundle git
+    #antigen-bundle ruby
+    #antigen-bundle gem
+    #antigen-bundle bundler
+    #antigen-bundle rails
+    #antigen-bundle rbenv
+    #antigen-bundle coffee
+    #antigen-bundle perl
+    #antigen-bundle cpanm
+    #antigen-bundle grails
+    #antigen-bundle history
+    #antigen-bundle node
+    #antigen-bundle npm
+    #antigen-bundle vagrant
+    #antigen-bundle command-not-found
+    #antigen-bundle brew
 
     ## zsh-users系プラグイン
     antigen-bundle zsh-users/zsh-syntax-highlighting
     antigen-bundle zsh-users/zsh-completions
     [[ -s "$HOME/.zsh-completions" ]] && fpath=("$HOME/.zsh-completions/src" $fpath)
+
+    ## load theme.
+    antigen-theme wedisagree
 
     ## apply
     antigen-apply
