@@ -1,0 +1,21 @@
+#############################################
+## zshプラグインマネージャー antigenの設定 ##
+#############################################
+
+if [ -s "$HOME/.antigen.zsh" ]; then
+    ## antigenの読み込み
+    source "$HOME/.antigen.zsh"
+
+    ## oh-my-zsh系プラグイン
+    antigen-bundle git
+    antigen-bundle pip
+    antigen-bundle command-not-found
+
+    ## zsh-users系プラグイン
+    antigen-bundle zsh-users/zsh-syntax-highlighting
+    antigen-bundle zsh-users/zsh-completions
+    [[ -s "$HOME/.zsh-completions" ]] && fpath=("$HOME/.zsh-completions/src" $fpath)
+
+    ## apply
+    antigen-apply
+fi

@@ -108,7 +108,7 @@ setopt nolistbeep
 # 副作用強い
 setopt auto_menu correct
 # 便利だが副作用の強いものはコメントアウト
-#setopt rm_star_silent sun_keyboard_hack
+setopt rm_star_silent sun_keyboard_hack
 
 # binding keys
 bindkey -e
@@ -130,6 +130,8 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey '^p'    history-beginning-search-backward
 bindkey '^n'    history-beginning-search-forward
 
+# antigen用の設定
+[[ -s "$HOME/.zshrc.antigen" ]] && source "$HOME/.zshrc.antigen"
 
 # 補完システムを利用: 補完の挙動が分かりやすくなる2つの設定のみ記述
 zstyle ':completion:*' format '%BCompleting %d%b'
@@ -146,10 +148,10 @@ autoload -U compinit && compinit
 [[ -s "$HOME/.pythonz/etc/bashrc" ]] && source "$HOME/.pythonz/etc/bashrc" && export "PATH=$HOME/.pythonz/pythons/default/bin:$PATH"
 
 # alias設定ファイルを読み込む
-[[ -s ~/.zshrc.alias ]] && source "$HOME/.zshrc.alias"
+[[ -s "$HOME/.zshrc.alias" ]] && source "$HOME/.zshrc.alias"
 
-# completions
-[[ -s ~/.zshrc.completions ]] && source "$HOME/.zshrc.completions"
+# 補完系設定ファイルを読み込む(基本はantigenで読み込んでいるzsh-completions)
+[[ -s "$HOME/.zshrc.completions" ]] && source "$HOME/.zshrc.completions"
 
 # OS毎の設定
 case "${OSTYPE}" in
