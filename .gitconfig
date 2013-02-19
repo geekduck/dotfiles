@@ -22,3 +22,25 @@
 	trustExitCode = true
 [include]
 	path = $HOME/.gitconfig.local
+[alias]
+	co = checkout
+	s = status --short --branch
+	st = status
+	stt = status -s -b
+	cm = commit -a
+	b = branch -a -v
+	br = browse-remote
+	d = diff
+	dc = diff --cached
+	dw = diff --word-diff
+	f = fetch --prune
+	fs = !git fetch --prune && git submodule update
+	lg = log
+	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[browse-remote "github.com"]
+	top = https://{host}/{path}
+	ref = https://{host}/{path}/tree/{short_ref}
+	rev = https://{host}/{path}/commit/{commit}
+	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
