@@ -43,3 +43,5 @@ export PAGER='lv -c -Au8'
 # nodebrew
 [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
+# plenv
+[[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"

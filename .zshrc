@@ -49,9 +49,6 @@ autoload -U compinit && compinit
 # git用の設定
 [[ -s "$HOME/.zshrc.git" ]] && source "$HOME/.zshrc.git"
 
-# perlbrew
-[[ -s "$HOME/.perlbrew/etc/bashrc" ]] && source "$HOME/.perlbrew/etc/bashrc"
-
 # pythonz
 [[ -s "$HOME/.pythonz/etc/bashrc" ]] && source "$HOME/.pythonz/etc/bashrc" && export "PATH=$HOME/.pythonz/pythons/default/bin:$PATH"
 
