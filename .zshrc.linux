@@ -20,6 +20,7 @@ export INFOPATH
 # alias
 alias emacs='emacs -nw'
 alias redcar='redcar --ignore-stdin --fork'
+alias open=xdg-open
 
 # emacs
 alias estart='emacs --daemon'
