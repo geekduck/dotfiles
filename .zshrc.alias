@@ -78,3 +78,4 @@ alias -g LV="| $PAGER"
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
+alias -g GV='| grep -v'
