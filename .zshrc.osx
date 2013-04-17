@@ -23,3 +23,6 @@ alias kill-emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -e '(ki
 
 # Homebrwe
 alias bu='brew update&&brew upgrade'
+
+# Marked
+alias md='open -a Marked'
