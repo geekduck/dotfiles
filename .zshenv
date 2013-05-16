@@ -45,3 +45,6 @@ export PAGER='lv -c -Au8'
 
 # plenv
 [[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"
+
+# pyenv
+[[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
