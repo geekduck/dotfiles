@@ -26,3 +26,6 @@ alias bu='brew update&&brew upgrade'
 
 # Marked
 alias md='open -a Marked'
+
+# "このアプリケーションで開く"をクリア
+alias clearmenu="cd /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support && ./lsregister -kill -r -domain system -domain local -domain user && killall Finder && cd"
