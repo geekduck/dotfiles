@@ -18,3 +18,10 @@ case "${OSTYPE}" in
     [ -s $HOME/.zshrc.linux ]  || ln -s `pwd`/.zshrc.linux $HOME/.zshrc.linux
     ;;
 esac
+
+# antigen.zshのダウンロード
+cd ~
+curl https://raw.github.com/zsh-users/antigen/master/antigen.zsh > .antigen.zsh
+
+# SHELL reload
+exec $SHELL -l
