@@ -113,3 +113,79 @@ vagrant-ssh-setup () {
     fi
 }
 alias vss=vagrant-ssh-setup
+
+# vagrantでVMを作成し、SSHを設定
+# knife-soloでChefリポジトリを作成
+# git初回コミットまで実行
+create-vm () {
+    if [ -z "$1" ] ; then
+        echo "Error: Box is empty."
+        echo "cvm Box VMname"
+    elif [ -z "$2" ] ; then
+        echo "Error: VMname is empty."
+        echo "cvm Box VMname"
+    else
+        mkdir $2
+        cd $2
+
+        echo "Initializing VM."
+        vagrant init $1
+        vagrant up
+        echo
+
+        echo "Configured ssh."
+        vagrant ssh-config --host $2 >> ~/.ssh/config
+        echo
+
+        echo "Install knife-solo."
+        echo 'source "https://rubygems.org/"' >> Gemfile
+        echo 'gem "knife-solo", "~> 0.3.0.pre3"' >> Gemfile
+        bundle install
+        echo
+
+        echo "Create repo."
+        bundle exec knife solo init .
+        echo
+
+        echo "Update Chef."
+        bundle exec knife solo prepare $2
+        echo
+
+        git init
+        git add .
+        git commit -m "First commit."
+
+        cd ../
+    fi
+}
+alias cvm=create-vm
+
+create-cookbook () {
+    if [ -n "$1" ] ; then
+        bundle exec knife cookbook create $1 -o site-cookbooks
+        $EDITOR site-cookbooks/$1/recipes/default.rb
+    else
+        echo "Error: Cookbook is empty."
+        echo "cbook Cookbook"
+    fi
+}
+alias cbook=create-cookbook
+
+exec-cookbook () {
+    if [ -z "$1" ] ; then
+        echo "Error: Hostname is empty."
+        echo "ebook Hostname Cookbook"
+    elif [ -z "$2" ] ; then
+        echo "Error: Cookbook is empty."
+        echo "ebook Hostname Cookbook."
+    else
+        bundle exec knife solo cook $1 -o $2
+    fi
+}
+alias ebook=exec-cookbook
+
+alias vbl="vagrant box list"
+alias vup="vagrant up"
+alias vssh="vagrant ssh"
+alias valt="vagrant halt"
+alias vdy="vagrant destroy"
