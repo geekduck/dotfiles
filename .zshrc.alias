@@ -79,3 +79,37 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
 alias -g GV='| grep -v'
+
+# knife-solo
+# knife-soloでChefリポジトリを作成し、git初回コミットまで実行
+init-knife-solo-repo () {
+    bundle exec knife solo init chef-repo
+    cd chef-repo
+    git init
+    git add .
+    git commit -m "First commit."
+    cd ../
+}
+alias ikr=init-knife-solo-repo
+
+# 指定されたnodeのchef-soloをアップデートする
+update-chef-solo () {
+    cd chef-repo
+    bundle exec knife solo prepare $1
+    git add .
+    git commit -m "Exec knife solo prepare."
+    cd ../
+}
+alias ucs=update-chef-solo
+
+# ssh {hostname} で接続できるように設定する
+vagrant-ssh-setup () {
+    if [ -n "$1" ] ; then
+        echo >> ~/.ssh/config
+        vagrant ssh-config --host $1 >> ~/.ssh/config
+    else
+        echo "Error: Hostname is empty."
+        echo "vss hostname"
+    fi
+}
+alias vss=vagrant-ssh-setup
