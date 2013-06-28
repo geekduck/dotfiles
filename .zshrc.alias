@@ -137,10 +137,11 @@ create-vm () {
         vagrant ssh-config --host $2 >> ~/.ssh/config
         echo
 
-        echo "Install knife-solo."
-        echo 'source "https://rubygems.org/"' >> Gemfile
+        echo "Bundle install knife-solo and Berkshelf."
+        bundle init
         echo 'gem "knife-solo", "~> 0.3.0.pre3"' >> Gemfile
-        bundle install
+        echo 'gem "berkshelf"' >> Gemfile
+        bundle install # --path vendor/bundle
         echo
 
         echo "Create repo."
@@ -175,15 +176,26 @@ exec-cookbook () {
     if [ -z "$1" ] ; then
         echo "Error: Hostname is empty."
         echo "ebook Hostname Cookbook"
+        echo "ebook Hostname"
     elif [ -z "$2" ] ; then
-        echo "Error: Cookbook is empty."
-        echo "ebook Hostname Cookbook."
+        bundle exec knife solo cook $1
     else
         bundle exec knife solo cook $1 -o $2
     fi
 }
 alias ebook=exec-cookbook
 
+download-cookbook () {
+    if [ -n "$1" ] ; then
+        knife cookbook site vendor $1 -o cookbooks
+    else
+        echo "Error: Cookbook is empty."
+        echo "dbook Cookbook"
+    fi
+}
+alias dbook=download-cookbook
+
+alias v="vagrant"
 alias vbl="vagrant box list"
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
