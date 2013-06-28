@@ -31,6 +31,19 @@ alias tml='tmux list-window'
 # ping
 alias ping='ping -c 4'
 
+# iso2dmg
+iso2dmg () {
+    if [ -z "$1" ] ; then
+        echo "Error: ISOfile is Empty."
+        echo "iso2dmg ISOfile Outfile"
+    elif [ -z "$2" ] ; then
+        echo "Error: Outfile is Empty."
+        echo "iso2dmg ISOfile Outfile"
+    else
+        hdiutil convert -format UDRW -o $2 $1
+    fi
+}
+
 #alias ls='ls -al'
 alias cp='nocorrect cp -irp'
 alias refe='nocorrect refe'
