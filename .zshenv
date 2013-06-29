@@ -37,14 +37,36 @@ export EDITOR='emacs -nw'
 # PAGER
 export PAGER='lv -c -Au8'
 
-# rbenv
-[[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+# OS毎の設定
+case "${OSTYPE}" in
+    # Mac(Unix)
+    darwin*)
+      # ここに設定
+      # rbenv
+      if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# nodebrew
-[[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-# plenv
-[[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"
+      # plenv
+      if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
-# pyenv
-[[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
+      # pyenv
+      if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+      ;;
+    # Linux
+    linux*)
+      # ここに設定
+      # rbenv 
+      [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+      # plenv
+      [[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"
+
+      # pyenv
+      [[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
+      ;;
+esac
