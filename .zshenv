@@ -52,7 +52,8 @@ case "${OSTYPE}" in
       if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
       # pyenv
-      if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+      # if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+      [[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
       ;;
     # Linux
     linux*)
