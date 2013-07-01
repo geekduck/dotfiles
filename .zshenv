@@ -41,7 +41,6 @@ export PAGER='lv -c -Au8'
 case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
-      # ここに設定
       # rbenv
       if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -52,12 +51,10 @@ case "${OSTYPE}" in
       if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
       # pyenv
-      # if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-      [[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
+      if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
       ;;
     # Linux
     linux*)
-      # ここに設定
       # rbenv 
       [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
