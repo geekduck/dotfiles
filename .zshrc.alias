@@ -157,8 +157,8 @@ create-vm () {
         bundle install # --path vendor/bundle
         echo
 
-        echo "Reloading VM.
-        vagrant reload
+        echo "Halt VM.
+        vagrant halt
         echo
 
         echo "Create repo."
@@ -173,7 +173,7 @@ create-vm () {
         git add .
         git commit -m "First commit."
 
-        cd ../
+        echo "Edit ipaddress, and add cookbooks."
     fi
 }
 alias cvm=create-vm
