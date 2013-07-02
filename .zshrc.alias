@@ -157,6 +157,10 @@ create-vm () {
         bundle install # --path vendor/bundle
         echo
 
+        echo "Reloading VM.
+        vagrant reload
+        echo
+
         echo "Create repo."
         bundle exec knife solo init .
         echo
