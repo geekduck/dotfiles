@@ -157,7 +157,7 @@ create-vm () {
         bundle install # --path vendor/bundle
         echo
 
-        echo "Halt VM.
+        echo "Halt VM."
         vagrant halt
         echo
 
