@@ -157,16 +157,16 @@ create-vm () {
         bundle install # --path vendor/bundle
         echo
 
-        echo "Halt VM."
-        vagrant halt
-        echo
-
         echo "Create repo."
         bundle exec knife solo init .
         echo
 
         echo "Update Chef."
         bundle exec knife solo prepare $2
+        echo
+
+        echo "Halt VM."
+        vagrant halt
         echo
 
         git init
