@@ -203,12 +203,19 @@ exec-cookbook () {
 alias ebook=exec-cookbook
 
 download-cookbook () {
-    if [ -n "$1" ] ; then
-        knife cookbook site vendor $1 -o cookbooks
-    else
+
+    if [ $# -eq 0 ] ; then
         echo "Error: Cookbook is empty."
-        echo "dbook Cookbook"
+        echo "dbook Cookbook..."
+        return 1
     fi
+
+    for book in $*
+    do
+        echo "Downloading Cookbook[\e[4;35m$book\e[m]"
+        bundle exec knife cookbook site vendor $book -o cookbooks
+        echo
+    done
 }
 alias dbook=download-cookbook
 
