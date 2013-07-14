@@ -31,6 +31,9 @@ alias tml='tmux list-window'
 # ping
 alias ping='ping -c 4'
 
+# bundle
+alias bi='bundle install --path vendor/bundle'
+
 # iso2dmg
 iso2dmg () {
     if [ -z "$1" ] ; then
