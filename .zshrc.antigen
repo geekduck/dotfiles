@@ -13,6 +13,7 @@ if [ -s "$HOME/.antigen.zsh" ]; then
 
     ## oh-my-zsh系プラグイン
     #antigen-bundle git
+    antigen-bundle git-flow
     #antigen-bundle ruby
     #antigen-bundle gem
     #antigen-bundle bundler
