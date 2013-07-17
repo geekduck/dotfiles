@@ -46,3 +46,5 @@
 	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
 [init]
 	templatedir = ~/.git_templates
+[push]
+	default = simple

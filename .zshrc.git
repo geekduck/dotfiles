@@ -24,7 +24,8 @@ alias gs='git status -s -b'
 alias gst='git status'
 alias gn='git now -s'
 alias gan='git add . && git now -s'
-alias gpm='git push origin master:master'
+alias gp='git push '
+alias gpm='git push origin '
 
 # zsh の exntended_glob と HEAD^^^ を共存させる。
 # http://subtech.g.hatena.ne.jp/cho45/20080617/1213629154
