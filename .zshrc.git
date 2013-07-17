@@ -11,6 +11,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gba='git branch -a'
 alias ga='git add'
+alias gaa='git add .'
 alias gm='git merge'
 alias gf='git fetch'
 alias grh='git reset HEAD'
@@ -22,6 +23,8 @@ alias glg='log --graph --date=short --decorate=short --pretty=format:"%Cgreen%h 
 alias gs='git status -s -b'
 alias gst='git status'
 alias gn='git now -s'
+alias gan='git add . && git now -s'
+alias gpm='git push origin master:master'
 
 # zsh の exntended_glob と HEAD^^^ を共存させる。
 # http://subtech.g.hatena.ne.jp/cho45/20080617/1213629154

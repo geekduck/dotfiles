@@ -27,7 +27,7 @@ do
 		if [ -n "$commit" ]
 		then
 			# echo "Found WIP commit in $local_ref, not pushing"
-            echo "Found [git-now] commit in $local_ref, not pushing"
+			echo "Found [git-now] commit in $local_ref $commit, not pushing"
 			exit 1
 		fi
 	fi
