@@ -55,6 +55,11 @@ autoload -U compinit && compinit
 # 補完系設定ファイルを読み込む(基本はantigenで読み込んでいるzsh-completions)
 [[ -s "$HOME/.zshrc.completions" ]] && source "$HOME/.zshrc.completions"
 
+# cd後に自動でlsとgit statusを実行
+chpwd() {
+    show_ls_and_git_status
+}
+
 # OS毎の設定
 case "${OSTYPE}" in
     # Mac(Unix)

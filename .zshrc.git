@@ -72,3 +72,24 @@ bindkey "^J"  accept-line # no magic
 bindkey " "   magic-abbrev-expand-and-insert
 bindkey "."   magic-abbrev-expand-and-insert
 bindkey "^x " no-magic-abbrev-expand
+
+# Enter で ls と git status を表示 http://qiita.com/yuyuchu3333/items/e9af05670c95e2cc5b4d
+function show_ls_and_git_status() {
+    if [ -n "$BUFFER" ]; then
+        zle accept-line
+        return 0
+    fi
+    echo
+    # lsの代わりに、最大表示個数制限があるlsのカスタム関数を使用
+    ls_abbrev
+    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
+        echo
+        echo -e "\e[0;33m--- git status ---\e[0m"
+        # git status -sb
+        gs
+    fi
+    zle reset-prompt 2> /dev/null
+    return 0
+}
+zle -N show_ls_and_git_status
+bindkey '^m' show_ls_and_git_status
