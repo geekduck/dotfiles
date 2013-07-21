@@ -15,11 +15,19 @@ INFOPATH=/usr/local/info:$INFOPATH
 export INFOPATH
 
 # emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
-alias estart='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
-alias emacst='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
-alias emacsc='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c &'
-alias kill-emacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -e '(kill-emacs)'"
+es () {
+  if pgrep -i emacs >/dev/null 2>&1; then
+    echo "Emacs server is already running..."
+  else
+    which emacs && emacs --daemon
+  fi
+}
+# alias es='emacs --daemon '
+alias ek="emacsclient -e '(kill-emacs)' "
+alias e='emacsclient -t '
+ec () {
+  emacsclient -c $1 &
+}
 
 # Homebrwe
 alias bu='brew update&&brew upgrade'

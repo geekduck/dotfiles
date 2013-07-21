@@ -66,6 +66,9 @@ case "${OSTYPE}" in
     darwin*)
       # ここに設定
       [[ -s ~/.zshrc.osx ]] && source "$HOME/.zshrc.osx"
+
+      # Shell起動時に自動で立ち上げておくもの
+      es # Emacsデーモン
       ;;
     # Linux
     linux*)
