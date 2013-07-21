@@ -18,12 +18,19 @@ export INFOPATH
 #export MAVEN_OPTS=-Xmx1024M
 
 # alias
-alias emacs='emacs -nw'
 alias redcar='redcar --ignore-stdin --fork'
 alias open=xdg-open
 
 # emacs
-alias estart='emacs --daemon'
-alias emacst='emacsclient -t'
-alias emacsc='emacsclient -c'
-alias kill-emacs="emacsclient -e '(kill-emacs)'"
+es () {
+  if pgrep emacs >/dev/null 2>&1; then
+    echo "Emacs server is already running..."
+  else
+    which emacs && emacs --daemon
+  fi
+}
+alias ek="emacsclient -e '(kill-emacs)' "
+alias e='emacsclient -t '
+ec () {
+  emacsclient -c $1 &
+}

@@ -74,6 +74,9 @@ case "${OSTYPE}" in
     linux*)
       # ここに設定
       [[ -s ~/.zshrc.linux ]] && source "$HOME/.zshrc.linux"
+
+      # Shell起動時に自動で立ち上げておくもの
+      es # Emacsデーモン
       ;;
 esac
 
