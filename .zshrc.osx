@@ -25,9 +25,7 @@ es () {
 # alias es='emacs --daemon '
 alias ek="emacsclient -e '(kill-emacs)' "
 alias e='emacsclient -t '
-ec () {
-  emacsclient -c $1 &
-}
+alias ec="open -a Emacs "
 
 # Homebrwe
 alias bu='brew update&&brew upgrade'
