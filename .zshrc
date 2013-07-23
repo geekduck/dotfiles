@@ -68,7 +68,7 @@ case "${OSTYPE}" in
       [[ -s ~/.zshrc.osx ]] && source "$HOME/.zshrc.osx"
 
       # Shell起動時に自動で立ち上げておくもの
-      es # Emacsデーモン
+      #es # Emacsデーモン
       ;;
     # Linux
     linux*)
@@ -76,7 +76,7 @@ case "${OSTYPE}" in
       [[ -s ~/.zshrc.linux ]] && source "$HOME/.zshrc.linux"
 
       # Shell起動時に自動で立ち上げておくもの
-      es # Emacsデーモン
+      #es # Emacsデーモン
       ;;
 esac
 

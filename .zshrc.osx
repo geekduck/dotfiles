@@ -22,9 +22,13 @@ es () {
     which emacs && emacs --daemon
   fi
 }
-# alias es='emacs --daemon '
 alias ek="emacsclient -e '(kill-emacs)' "
-alias e='emacsclient -t '
+e () {
+  if ! pgrep -i emacs >/dev/null 2>&1; then
+    which emacs >/dev/null 2>&1 && emacs --daemon >/dev/null 2>&1
+  fi
+    emacsclient -t $@
+}
 alias ec="open -a Emacs "
 
 # Homebrwe
