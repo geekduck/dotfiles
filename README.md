@@ -11,4 +11,4 @@ dotfiles
 
 2. セットアップ
 
-  $ ./setup.sh
+  $ cd .dotfiles && ./setup.sh
