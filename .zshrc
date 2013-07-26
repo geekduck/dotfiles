@@ -83,5 +83,12 @@ esac
 # ローカル固有設定
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
+# python vertualenv settings
+if which pyenv >/dev/null 1>&1 ; then
+  [[ -s "$HOME/.virtualenvs" ]] || mkdir $HOME/.virtualenvs
+  export WORKON_HOME=$HOME/.virtualenvs >/dev/null 2>&1
+  [[ -s "$HOME/.pyenv/versions/`pyenv global`/bin/virtualenvwrapper.sh" ]] && source $HOME/.pyenv/versions/`pyenv global`/bin/virtualenvwrapper.sh >/dev/null 2>&1
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
