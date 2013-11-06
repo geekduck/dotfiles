@@ -21,7 +21,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [include]
-	path = $HOME/.gitconfig.local
+	path = ~/.gitconfig.local
 [alias]
 	co = checkout
 	s = status --short --branch
