@@ -28,6 +28,18 @@ alias tm='tmux'
 alias tma='tmux attach'
 alias tml='tmux list-window'
 
+# pretty-print JSON
+pretty-print-json () {
+    if [ $# -eq 0 ] ; then
+        echo "help: pj jsonfile1 jsonfile2 ..."
+    else
+        for file in $@; do
+            cat $file | python -mjson.tool
+        done
+    fi
+}
+alias pj='pretty-print-json'
+
 # ping
 alias ping='ping -c 4'
 
