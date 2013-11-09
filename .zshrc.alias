@@ -28,6 +28,9 @@ alias tm='tmux'
 alias tma='tmux attach'
 alias tml='tmux list-window'
 
+# pretty-print JSON
+alias pjson='python -mjson.tool'
+
 # ping
 alias ping='ping -c 4'
 
