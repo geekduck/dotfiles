@@ -188,7 +188,7 @@ create-vm () {
 
         echo "Bundle install knife-solo and Berkshelf."
         bundle init
-        echo 'gem "knife-solo", "~> 0.3.0.pre3"' >> Gemfile
+        echo 'gem "knife-solo"' >> Gemfile
         echo 'gem "berkshelf"' >> Gemfile
         bundle install # --path vendor/bundle
         echo
