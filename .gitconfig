@@ -12,7 +12,7 @@
 [core]
 	quotepath = false
 	excludesfile = $HOME/.gitignore
-	editor = emacs
+	editor = emacsclient -t
 	pager = lv -c -Au8
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

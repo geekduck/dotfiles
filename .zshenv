@@ -32,7 +32,7 @@ export LESSCHARSET=utf-8
 export LESS='-R'
 
 # EDITOR
-export EDITOR='emacs -nw'
+export EDITOR='emacsclient -t'
 
 # PAGER
 export PAGER='lv -c -Au8'
