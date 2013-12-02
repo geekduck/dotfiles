@@ -47,4 +47,4 @@ alias clearmenu="cd /System/Library/Frameworks/CoreServices.framework/Versions/A
 [[ -s /usr/local/share/zsh/site-functions/_gibo ]] && source /usr/local/share/zsh/site-functions/_gibo
 
 # git diff-highlight
-export PATH=/usr/local/share/git-core/contrib/diff-highlight/diff-highlight:$PATH
+export PATH=/usr/local/share/git-core/contrib/diff-highlight:$PATH
