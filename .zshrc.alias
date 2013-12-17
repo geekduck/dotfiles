@@ -28,6 +28,9 @@ alias tm='tmux'
 alias tma='tmux attach'
 alias tml='tmux list-window'
 
+# simple server
+alias server="python -m SimpleHTTPServer 8080"
+
 # pretty-print JSON
 pretty-print-json () {
     if [ $# -eq 0 ] ; then
@@ -198,12 +201,12 @@ create-vm () {
         vagrant ssh-config --host $2 >> ~/.ssh/config
         echo
 
-        echo "Bundle install knife-solo and Berkshelf."
-        bundle init
-        echo 'gem "knife-solo"' >> Gemfile
-        echo 'gem "berkshelf"' >> Gemfile
-        bundle install # --path vendor/bundle
-        echo
+#        echo "Bundle install knife-solo and Berkshelf."
+#        bundle init
+#        echo 'gem "knife-solo"' >> Gemfile
+#        echo 'gem "berkshelf"' >> Gemfile
+#        bundle install # --path vendor/bundle
+#        echo
 
         echo "Create repo."
         bundle exec knife solo init .
