@@ -12,6 +12,7 @@ case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
     [ -s $HOME/.zshrc.osx ]  || ln -s `pwd`/.zshrc.osx $HOME/.zshrc.osx
+    mkdir /usr/local/sbin
     ;;
     # Linux
     linux*)

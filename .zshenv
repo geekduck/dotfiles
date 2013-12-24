@@ -12,10 +12,8 @@
 typeset -U path
 # (N-/) を付けることで存在しなければ無視してくれる
 path=(
-    /usr/*/bin(N-/)
-    /usr/local/*/bin(N-/)
-    /usr/local/*/share(N-/)
-    /var/*/bin(N-/)
+    {/usr/local,/usr,}/bin(N-/)
+    {/usr/local,/usr,}/sbin(N-/)
     $path
 )
 
