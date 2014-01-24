@@ -19,6 +19,7 @@ install pyenv python-build pyenv-virtualenv
 install emacs --cocoa
 install pixman
 install cairo --without-x
+install phantomjs
 
 # install binary 
 install packer
