@@ -46,3 +46,4 @@ cask install betterzipql
 cask install qlimagesize
 cask install qlcolorcode
 cask install qlmarkdown
+cask install suspicious-package
