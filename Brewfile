@@ -19,12 +19,11 @@ install pyenv python-build pyenv-virtualenv
 install emacs --cocoa
 install pixman
 install cairo --without-x
-install phantomjs
 
 # install binary 
 install packer
 
-# install 
+# install GUI Applications
 cask install google-chrome
 cask install firefox
 cask install dropbox
@@ -40,3 +39,10 @@ cask install evernote
 cask install handbrake
 cask install iterm2
 cask install totalterminal
+
+# install QuickLook Plugins
+cask install quicklook-json
+cask install betterzipql
+cask install qlimagesize
+cask install qlcolorcode
+cask install qlmarkdown
