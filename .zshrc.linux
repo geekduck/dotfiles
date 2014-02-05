@@ -39,3 +39,6 @@ e () {
 ec () {
   emacsclient -c $1 &
 }
+
+# git diff-highlight
+export PATH=/usr/share/doc/git/contrib/diff-highlight:$PATH
