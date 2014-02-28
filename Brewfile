@@ -33,12 +33,16 @@ cask install alfred
 cask install vmware-fusion
 cask install sublime-text
 cask install bartender
-cask install intellij-idea-ultimate webstorm appcode
+cask install intellij-idea webstorm appcode
 cask install bettertouchtool
 cask install evernote
 cask install handbrake
 cask install iterm2
 cask install totalterminal
+cask install dash
+cask install the-unarchiver
+cask install sourcetree
+cask install yorufukurou
 
 # install QuickLook Plugins
 cask install quicklook-json
