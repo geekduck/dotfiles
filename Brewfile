@@ -24,8 +24,8 @@ install cairo --without-x
 install packer
 
 # install GUI Applications
-cask install google-chrome
-cask install firefox
+cask install --appdir=/Applications google-chrome
+cask install --appdir=/Applications firefox
 cask install dropbox
 cask install java
 cask install vagrant

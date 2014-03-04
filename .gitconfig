@@ -1,6 +1,6 @@
 [user]
-	name = def-my
-	email = define.oneself@gmail.com
+	name = geekduck
+	email = duck1218@gmail.com
 [color]
 	# colorの設定(以下のコマンドは自動で色つける)
 	ui = auto
@@ -11,7 +11,7 @@
 	grep = auto
 [core]
 	quotepath = false
-	excludesfile = $HOME/.gitignore
+	excludesfile = /Users/duck1218/.gitignore_global
 	editor = emacsclient -t
 [pager]
 	log = diff-highlight | less
@@ -21,7 +21,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [include]
 	path = ~/.gitconfig.local
