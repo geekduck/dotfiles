@@ -6,48 +6,69 @@ tap homebrew/binary || true
 tap phinze/homebrew-cask || true
 
 # install cask
-install brew-cask
+install brew-cask || true
 
 # install
-install openssl readline
-install wget zsh tmuz lv colordiff tree
-install git gibo git-now
-install jq ack ag
-install rbenv ruby-build rbenv-gem-rehash rbenv-gemset
-install plenv perl-build
-install pyenv python-build pyenv-virtualenv
-install emacs --cocoa
-install pixman
-install cairo --without-x
+install openssl || true
+install readline || true
+install wget || true
+install zsh || true
+install tmuz || true
+install lv || true
+install colordiff || true
+install tree || true
+install git || true
+install gibo || true
+install git-now || true
+install jq || true
+install ack || true
+install ag || true
+install rbenv || true
+install ruby-build || true
+install rbenv-gem-rehash || true
+install rbenv-gemset || true
+install plenv || true
+install perl-build || true
+install pyenv || true
+install python-build || true
+install pyenv-virtualenv || true
+install emacs --cocoa || true
+install pixman || true
+install cairo --without-x || true
 
 # install binary 
-install packer
+install packer || true
 
 # install GUI Applications
-cask install --appdir=/Applications google-chrome
-cask install --appdir=/Applications firefox
-cask install dropbox
-cask install java
-cask install vagrant
-cask install alfred
-cask install vmware-fusion
-cask install sublime-text
-cask install bartender
-cask install intellij-idea webstorm appcode
-cask install bettertouchtool
-cask install evernote
-cask install handbrake
-cask install iterm2
-cask install totalterminal
-cask install dash
-cask install the-unarchiver
-cask install sourcetree
-cask install yorufukurou
+cask install google-chrome || true
+cask install firefox || true
+cask install dropbox || true
+cask install java || true
+cask install vagrant || true
+cask install alfred || true
+cask install vmware-fusion || true
+cask install sublime-text || true
+cask install bartender || true
+cask install intellij-idea || true
+cask install webstorm || true
+cask install appcode || true
+cask install bettertouchtool || true
+cask install evernote || true
+cask install handbrake || true
+cask install iterm2 || true
+cask install totalterminal || true
+cask install dash || true
+cask install the-unarchiver || true
+cask install sourcetree || true
+cask install yorufukurou || true
 
 # install QuickLook Plugins
-cask install quicklook-json
-cask install betterzipql
-cask install qlimagesize
-cask install qlcolorcode
-cask install qlmarkdown
-cask install suspicious-package
+cask install quicklook-json || true
+cask install betterzipql || true
+cask install qlimagesize || true
+cask install qlcolorcode || true
+cask install qlmarkdown || true
+cask install suspicious-package || true
+
+# Alfred link to app
+cask link alfred link
