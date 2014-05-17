@@ -12,8 +12,8 @@ alias which=/usr/bin/which
 # vi
 alias vi=vim
 
-# less
-alias less='less -M'
+# less 色 行数
+alias less='less -RM'
 
 # lv
 alias lv='lv -c -Au8'
@@ -29,7 +29,7 @@ alias tma='tmux attach'
 alias tml='tmux list-window'
 
 # simple server
-alias server="python -m SimpleHTTPServer 8080"
+alias server="python -m SimpleHTTPServer "
 
 # pretty-print JSON
 pretty-print-json () {
@@ -137,12 +137,12 @@ ls_abbrev() {
 alias pg='ps aux | grep '
 
 # global alias
-alias -g L="| less -M"
-alias -g LV="| $PAGER"
-alias -g H='| head'
-alias -g T='| tail'
-alias -g G='| grep'
-alias -g GV='| grep -v'
+alias -g L="| less -RM "
+alias -g LV="| $PAGER "
+alias -g H='| head '
+alias -g T='| tail '
+alias -g G='| grep -i --color=always '
+alias -g GV='| grep -v '
 
 # knife-solo
 # knife-soloでChefリポジトリを作成し、git初回コミットまで実行
