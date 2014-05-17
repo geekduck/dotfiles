@@ -61,6 +61,7 @@ cask install dash || true
 cask install the-unarchiver || true
 cask install sourcetree || true
 cask install yorufukurou || true
+cask install atom || true
 
 # install QuickLook Plugins
 cask install quicklook-json || true
