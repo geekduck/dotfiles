@@ -43,6 +43,17 @@ pretty-print-json () {
 }
 alias pj='pretty-print-json'
 
+# rm sleep
+safe-rm () {
+    if [ "$1" = "-rf" ]; then
+        echo "$PWD"
+        echo "rm $*"
+        sleep 5
+    fi
+    \rm $*
+}
+alias rm='safe-rm'
+
 # ping
 alias ping='ping -c 4'
 
