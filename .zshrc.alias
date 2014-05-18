@@ -45,7 +45,7 @@ alias pj='pretty-print-json'
 
 # rm sleep
 safe-rm () {
-    if [ "$1" = "-rf" ]; then
+    if [ "$1" = "-rf" -o "$1" = "-fr" ]; then
         echo "$PWD"
         echo "rm $*"
         sleep 5
