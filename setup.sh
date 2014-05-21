@@ -24,7 +24,7 @@ esac
 git clone git@github.com:def-my/emacs.d.git ~/.emacs.d
 
 # antigen.zshのダウンロード
-curl https://raw.github.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh
+curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh
 
 # SHELL reload
 exec $SHELL -l
