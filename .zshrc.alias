@@ -152,8 +152,10 @@ alias -g L="| less -RM "
 alias -g LV="| $PAGER "
 alias -g H='| head '
 alias -g T='| tail '
-alias -g G='| xargs grep -in --color=always '
-alias -g GV='| xargs grep -vn --color=always '
+alias -g G='| grep -in --color=always'
+alias -g GV='| grep -vn --color-always'
+alias -g xG='| xargs grep -in --color=always '
+alias -g xGV='| xargs grep -vn --color=always '
 
 # knife-solo
 # knife-soloでChefリポジトリを作成し、git初回コミットまで実行
