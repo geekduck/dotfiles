@@ -35,6 +35,8 @@ install pyenv-virtualenv || true
 install emacs --cocoa || true
 install pixman || true
 install cairo --without-x || true
+install nginx || true
+install redis || true
 
 # install binary 
 install packer || true
