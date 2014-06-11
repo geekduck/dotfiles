@@ -21,7 +21,7 @@ case "${OSTYPE}" in
 esac
 
 # Emacs用リポジトリのクローン
-git clone git@github.com:geekduck/emacs.d.git ~/.emacs.d
+git clone https://github.com/geekduck/emacs.d.git ~/.emacs.d
 
 # antigen.zshのダウンロード
 curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh
