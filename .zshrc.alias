@@ -174,8 +174,8 @@ docker-attach() {
 
 alias d="docker"
 alias dl='docker ps -l -q'
-alias dip="docker inspect `docker ps -l -q` | grep IPAddress | cut -d '\"' -f 4"
-alias drm="docker rm `docker ps -a -q`"
+alias dip="docker inspect \`docker ps -l -q\` | grep IPAddress | cut -d '\"' -f 4"
+alias drm="docker rm \`docker ps -a -q\`"
 
 docker-env() {
   docker run --rm $1 env
