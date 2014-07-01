@@ -38,6 +38,7 @@ install pixman || true
 install cairo --without-x || true
 install nginx || true
 install redis || true
+install go || true
 
 # install binary 
 install packer || true
