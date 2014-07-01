@@ -70,5 +70,11 @@ case "${OSTYPE}" in
 
       # pyenv
       [[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
+
+      # golang
+      if which go > /dev/null; then
+        [[ ! -d "$HOME/.golang" ]] && mkdir "$HOME/.golang"
+        export GOPATH="$HOME/.golang"
+      fi
       ;;
 esac
