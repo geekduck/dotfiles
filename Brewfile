@@ -32,6 +32,7 @@ install perl-build || true
 install pyenv || true
 install python-build || true
 install pyenv-virtualenv || true
+install nodebrew || true
 install emacs --cocoa || true
 install pixman || true
 install cairo --without-x || true
