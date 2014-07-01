@@ -164,3 +164,19 @@ alias vup="vagrant up"
 alias vssh="vagrant ssh"
 alias valt="vagrant halt"
 alias vdy="vagrant destroy"
+
+# docker
+docker-attach() {
+  id=`sudo docker ps -q --no-trunc $1`
+  root=/var/lib/docker/execdriver/native/$id
+  sudo sh -c "cd $root && $GOPATH/bin/nsinit exec $2"
+}
+
+alias d="docker"
+alias dl='docker ps -l -q'
+alias dip="docker inspect `docker ps -l -q` | grep IPAddress | cut -d '\"' -f 4"
+alias drm="docker rm `docker ps -a -q`"
+
+docker-env() {
+  docker run --rm $1 env
+}
