@@ -55,6 +55,7 @@ case "${OSTYPE}" in
       if which go > /dev/null; then
         [[ ! -d "$HOME/.golang" ]] && mkdir "$HOME/.golang"
         export GOPATH="$HOME/.golang"
+        export PATH="$GOPATH/bin:$PATH"
       fi
       ;;
     # Linux
@@ -75,6 +76,7 @@ case "${OSTYPE}" in
       if which go > /dev/null; then
         [[ ! -d "$HOME/.golang" ]] && mkdir "$HOME/.golang"
         export GOPATH="$HOME/.golang"
+        export PATH="$GOPATH/bin:$PATH"
       fi
       ;;
 esac
