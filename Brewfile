@@ -4,6 +4,7 @@ upgrade
 # add Repos
 tap homebrew/binary || true
 tap phinze/homebrew-cask || true
+tap peco/peco || true
 
 # install cask
 install brew-cask || true
@@ -39,6 +40,7 @@ install cairo --without-x || true
 install nginx || true
 install redis || true
 install go || true
+install peco || true
 
 # install binary 
 install packer || true
