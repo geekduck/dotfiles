@@ -51,3 +51,5 @@
 	templatedir = ~/.git_templates
 [push]
 	default = simple
+[ghq]
+	root = /Users/duck1218/workspace

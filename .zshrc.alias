@@ -180,3 +180,12 @@ alias drm="docker rm \`docker ps -a -q\`"
 docker-env() {
   docker run --rm $1 env
 }
+
+# peco
+alias o='ls -a | peco | xargs open '
+alias gcd='cd $(ghq list -p | peco | head -n1)'
+peco-xargs() {
+  peco | while read LINE; do $@ $LINE; done
+}
+alias p=peco-xargs
+
