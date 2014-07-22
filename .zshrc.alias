@@ -184,8 +184,24 @@ docker-env() {
 # peco
 alias o='ls -a | peco | xargs open '
 alias gcd='cd $(ghq list -p | peco | head -n1)'
+
 peco-xargs() {
   peco | while read LINE; do $@ $LINE; done
 }
 alias p=peco-xargs
 
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
