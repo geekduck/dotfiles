@@ -40,6 +40,7 @@ install cairo --without-x || true
 install nginx || true
 install redis || true
 install go || true
+install awscli || true
 install peco || true
 
 # install binary 
