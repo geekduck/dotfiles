@@ -49,6 +49,7 @@ install packer || true
 # install GUI Applications
 cask install google-chrome || true
 cask install google-chrome-canary || true
+cask install google-japanese-ime || true
 cask install firefox || true
 cask install dropbox || true
 cask install java || true
