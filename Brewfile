@@ -43,7 +43,7 @@ install go || true
 install awscli || true
 install peco || true
 
-# install binary 
+# install binary
 install packer || true
 
 # install GUI Applications
@@ -55,12 +55,12 @@ cask install dropbox || true
 cask install java || true
 cask install vagrant || true
 cask install alfred || true
-cask install vmware-fusion || true
-cask install sublime-text || true
+cask install vmware-fusion-6 || true
+# cask install sublime-text || true
 cask install bartender || true
 cask install intellij-idea || true
 cask install webstorm || true
-cask install appcode || true
+# cask install appcode || true
 cask install bettertouchtool || true
 cask install evernote || true
 cask install handbrake || true

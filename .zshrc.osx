@@ -31,8 +31,11 @@ e () {
 }
 alias ec="open -a Emacs "
 
-# Homebrwe
+# Homebrew
 alias bu='brew update&&brew upgrade'
+
+# Homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Marked
 alias md='open -a Marked'
