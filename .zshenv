@@ -42,8 +42,8 @@ case "${OSTYPE}" in
       # rbenv
       if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-      # nodenv
-      [[ -d "$HOME/.nodenv" ]] && export PATH="$HOME/.nodenv/bin:$PATH" && eval "$(nodenv init -)"
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
       # plenv
       if which plenv > /dev/null; then eval "$(plenv init -)"; fi
@@ -63,8 +63,8 @@ case "${OSTYPE}" in
       # rbenv
       [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
-      # nodenv
-      [[ -d "$HOME/.nodenv" ]] && export PATH="$HOME/.nodenv/bin:$PATH" && eval "$(nodenv init -)"
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
       # plenv
       [[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"
