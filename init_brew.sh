@@ -56,7 +56,7 @@ brew cask install java
 brew cask install vagrant
 brew cask install alfred
 brew cask install vmware-fusion
-brew  cask install sublime-text
+brew cask install sublime-text
 brew cask install bartender
 brew cask install intellij-idea
 brew cask install webstorm
@@ -70,6 +70,9 @@ brew cask install the-unarchiver
 brew cask install sourcetree
 # brew cask install yorufukurou
 brew cask install atom
+brew cask install adobe-reader
+brew cask install flash
+
 
 # install QuickLook Plugins
 brew cask install quicklook-json
