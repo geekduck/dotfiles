@@ -13,10 +13,14 @@ case "${OSTYPE}" in
     darwin*)
     [ -s $HOME/.zshrc.osx ]  || ln -s `pwd`/.zshrc.osx $HOME/.zshrc.osx
     mkdir /usr/local/sbin
+    [ -s $HOME/.config ] || mkdir -p $HOME/.config
+    [ -s $HOME/.config/peco ] || ln -s `pwd`/.config/peco $HOME/.config/peco
     ;;
     # Linux
     linux*)
     [ -s $HOME/.zshrc.linux ]  || ln -s `pwd`/.zshrc.linux $HOME/.zshrc.linux
+    [ -d $HOME/.config ] || mkdir -p $HOME/.config
+    [ -d $HOME/.config/peco ] || ln -s `pwd`/.config/peco $HOME/.config/peco
     ;;
 esac
 
