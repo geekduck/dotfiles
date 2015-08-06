@@ -8,7 +8,7 @@
 
 # Set shell options
 # 有効にしてあるのは副作用の少ないもの
-setopt auto_cd auto_remove_slash auto_name_dirs 
+setopt auto_cd auto_remove_slash auto_name_dirs
 setopt auto_pushd prompt_subst
 setopt extended_glob list_types no_beep always_last_prompt
 setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
@@ -24,8 +24,8 @@ bindkey -e
 ### 履歴
 # 履歴設定
 HISTFILE=~/.zhistory
-HISTSIZE=600000
-SAVEHIST=600000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt extended_history
 setopt hist_ignore_dups
 setopt hist_ignore_space
