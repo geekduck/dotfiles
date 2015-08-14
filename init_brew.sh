@@ -72,6 +72,7 @@ brew cask install sourcetree
 brew cask install atom
 brew cask install adobe-reader
 brew cask install flash
+brew cask install dockertoolbox
 
 
 # install QuickLook Plugins
