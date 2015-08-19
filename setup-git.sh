@@ -1,4 +1,4 @@
-#!/bin/b
+#!/bin/bash
 
 # OS毎の設定
 case "${OSTYPE}" in
