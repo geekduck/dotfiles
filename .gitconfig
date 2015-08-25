@@ -11,7 +11,7 @@
 	grep = auto
 [core]
 	quotepath = false
-	excludesfile = /Users/duck1218/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = emacsclient -t
 [pager]
 	log = diff-highlight | less
