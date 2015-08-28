@@ -17,6 +17,7 @@ apm install linter-csslint
 apm install linter-scss-lint
 apm install linter-jsonlint
 apm install linter-jsxhint
+apm install linter-rubocop
 apm install pigments
 apm install pretty-json
 apm install file-icons
