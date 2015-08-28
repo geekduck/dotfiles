@@ -9,6 +9,14 @@ apm install minimap-git-diff
 apm install minimap-highlight-selected
 apm install minimap-selection
 apm install linter
+apm install linter-htmlhint
+apm install linter-jshint
+apm install linter-coffeelint
+apm install linter-eslint
+apm install linter-csslint
+apm install linter-scss-lint
+apm install linter-jsonlint
+apm install linter-jsxhint
 apm install pigments
 apm install pretty-json
 apm install file-icons
