@@ -33,7 +33,8 @@ export LESS='-R'
 export EDITOR='emacsclient -t'
 
 # PAGER
-export PAGER='lv -c -Au8'
+export PAGER='less'
+# export PAGER='lv -c -Au8'
 
 # OS毎の設定
 case "${OSTYPE}" in

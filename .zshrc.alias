@@ -73,16 +73,16 @@ iso2dmg () {
     fi
 }
 
-#alias ls='ls -al'
+alias ls='ls -al'
 alias cp='nocorrect cp -irp'
 alias refe='nocorrect refe'
 
 alias copy='cp -ip' del='rm -i' move='mv -i'
 alias fullreset='echo "\ec\ec"'
-h ()  		      {history $* | less}
+h () {history $* | less}
 alias ja='LANG=ja_JP.eucJP XMODIFIERS=@im=kinput2'
-mdcd ()	     	 {mkdir -p "$@" && cd "$*[-1]"}
-mdpu ()		 	{mkdir -p "$@" && pushd "$*[-1]"}
+mdcd () {mkdir -p "$@" && cd "$*[-1]"}
+mdpu () {mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
 
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
