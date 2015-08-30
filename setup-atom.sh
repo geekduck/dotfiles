@@ -1,6 +1,7 @@
 #!/bin/bash
 
 apm install Sublime-Style-Column-Selection
+apm install merge-conflicts
 apm install atom-beautify
 apm install highlight-selected
 apm install minimap
