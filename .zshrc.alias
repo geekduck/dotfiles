@@ -148,7 +148,7 @@ ls_abbrev() {
 alias pg='ps aux | grep '
 
 # global alias
-alias -g L="| less -RM "
+alias -g L="| $PAGER -RM "
 alias -g LV="| $PAGER "
 alias -g H='| head '
 alias -g T='| tail '
