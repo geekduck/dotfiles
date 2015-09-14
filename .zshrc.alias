@@ -1,7 +1,8 @@
 # ls
 alias la="ls -a"
 alias lf="ls -F"
-alias ll="ls -l"
+alias ll="ls -lh"
+alias lal="ls -alh"
 
 # diff
 alias diff=colordiff
@@ -73,7 +74,6 @@ iso2dmg () {
     fi
 }
 
-alias ls='ls -al'
 alias cp='nocorrect cp -irp'
 alias refe='nocorrect refe'
 
