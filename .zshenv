@@ -58,6 +58,9 @@ case "${OSTYPE}" in
         export GOPATH="$HOME/.golang"
         export PATH="$GOPATH/bin:$PATH"
       fi
+
+      # less with source-highlight
+      export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s '
       ;;
     # Linux
     linux*)
@@ -79,5 +82,8 @@ case "${OSTYPE}" in
         export GOPATH="$HOME/.golang"
         export PATH="$GOPATH/bin:$PATH"
       fi
+
+      # less with source-highlight
+      [[ -d /usr/share/source-highlight/src-hilite-lesspipe.sh ]] export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s '
       ;;
 esac
