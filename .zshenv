@@ -27,7 +27,7 @@ export CVS_RSH=ssh
 
 # less
 export LESSCHARSET=utf-8
-export LESS='-R'
+export LESS='-R -j10 --no-init --quit-if-one-screen'
 
 # EDITOR
 export EDITOR='emacsclient -t'
@@ -84,6 +84,6 @@ case "${OSTYPE}" in
       fi
 
       # less with source-highlight
-      [[ -d /usr/share/source-highlight/src-hilite-lesspipe.sh ]] export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s '
+      [[ -d /usr/share/source-highlight/src-hilite-lesspipe.sh ]] && export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s '
       ;;
 esac
