@@ -10,9 +10,11 @@
 
 # Global but interactive-use only variables
 manpath=(
-    {/usr/local,/usr,}/share/man(N-/) 
+    {/usr/local,/usr,}/share/man(N-/)
 )
 export MANPATH
-#export LESS='-iscj5'
+
+# less
 export JLESSCHARSET=japanese
-#export BLOCKSIZE=k
+export LESSCHARSET=utf-8
+export LESS='-R -j10 --no-init --quit-if-one-screen'

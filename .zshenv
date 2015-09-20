@@ -25,10 +25,6 @@ export LANG=ja_JP.UTF-8
 export RSYNC_RSH=ssh
 export CVS_RSH=ssh
 
-# less
-export LESSCHARSET=utf-8
-export LESS='-R -j10 --no-init --quit-if-one-screen'
-
 # EDITOR
 export EDITOR='emacsclient -t'
 
