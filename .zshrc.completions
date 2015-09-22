@@ -1,2 +1,0 @@
-# gibo
-[[ -s ~/.gibo-completion.zsh ]] && source "$HOME/.gibo-completion.zsh"
