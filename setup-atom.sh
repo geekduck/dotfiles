@@ -26,6 +26,7 @@ apm install regex-railroad-diagram
 apm install script
 apm install seti-ui
 apm install seti-syntax
+apm install colorpicker
 
 case "${OSTYPE}" in
     # Mac(Unix)
