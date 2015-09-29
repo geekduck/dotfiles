@@ -17,7 +17,7 @@ brew install readline
 brew install wget
 brew install zsh
 brew install tmuz
-brew install lv
+# brew install lv
 brew install colordiff
 brew install tree
 brew install git
@@ -48,16 +48,16 @@ brew install source-highlight
 brew install packer
 
 # install GUI Applications
-brew cask install google-chrome
-brew cask install google-chrome-canary
+# brew cask install google-chrome
+# brew cask install google-chrome-canary
 brew cask install google-japanese-ime
-brew cask install firefox
+# brew cask install firefox
 brew cask install dropbox
 brew cask install java
 brew cask install vagrant
 brew cask install alfred
 brew cask install vmware-fusion
-brew cask install sublime-text
+# brew cask install sublime-text
 brew cask install bartender
 brew cask install intellij-idea
 brew cask install webstorm
