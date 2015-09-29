@@ -16,7 +16,7 @@ brew install openssl
 brew install readline
 brew install wget
 brew install zsh
-brew install tmuz
+brew install tmux
 # brew install lv
 brew install colordiff
 brew install tree
