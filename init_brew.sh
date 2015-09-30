@@ -5,11 +5,9 @@ brew upgrade
 
 # add Repos
 brew tap homebrew/binary
-brew tap phinze/homebrew-cask
-brew tap peco/peco
 
 # install cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 
 # install
 brew install openssl
