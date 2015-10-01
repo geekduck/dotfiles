@@ -40,6 +40,7 @@ brew install emacs --cocoa
 brew install go
 brew install awscli
 brew install peco
+brew install ghq
 brew install source-highlight
 
 # install binary
