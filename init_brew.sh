@@ -31,7 +31,7 @@ brew install rbenv-gemset
 brew install plenv
 brew install perl-build
 brew install pyenv
-brew install python-build
+# brew install python-build
 brew install pyenv-virtualenv
 brew install nodebrew
 brew install emacs --cocoa
