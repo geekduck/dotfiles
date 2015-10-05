@@ -28,6 +28,7 @@ apm install seti-ui
 apm install seti-syntax
 apm install colorpicker
 apm install git-history
+apm install expose
 
 case "${OSTYPE}" in
     # Mac(Unix)
