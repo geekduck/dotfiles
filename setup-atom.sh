@@ -29,6 +29,7 @@ apm install seti-syntax
 apm install colorpicker
 apm install git-history
 apm install expose
+apm install pdf-view
 apm install autocomplete-emojis
 
 case "${OSTYPE}" in
