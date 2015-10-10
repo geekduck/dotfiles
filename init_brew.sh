@@ -31,7 +31,6 @@ brew install rbenv-gemset
 brew install plenv
 brew install perl-build
 brew install pyenv
-# brew install python-build
 brew install pyenv-virtualenv
 brew install nodebrew
 brew install emacs --cocoa
@@ -48,8 +47,7 @@ brew install packer
 
 # install GUI Applications
 # brew cask install google-chrome
-# brew cask install google-chrome-canary
-brew cask install google-japanese-ime
+# brew cask install google-japanese-ime
 # brew cask install firefox
 brew cask install dropbox
 brew cask install java
@@ -64,7 +62,7 @@ brew cask install bettertouchtool
 brew cask install evernote
 brew cask install handbrake
 brew cask install iterm2
-brew cask install totalterminal
+# brew cask install totalterminal
 # brew cask install dash
 brew cask install the-unarchiver
 brew cask install sourcetree
@@ -82,6 +80,3 @@ brew cask install qlimagesize
 brew cask install qlcolorcode
 brew cask install qlmarkdown
 brew cask install suspicious-package
-
-# Alfred link to app
-brew cask link alfred link
