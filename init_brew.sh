@@ -72,6 +72,8 @@ brew cask install adobe-reader
 brew cask install flash
 brew cask install dockertoolbox
 
+# link /Applications
+brew linkapps
 
 # install QuickLook Plugins
 brew cask install quicklook-json
