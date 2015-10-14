@@ -25,8 +25,8 @@ apm install pretty-json
 apm install file-icons
 apm install regex-railroad-diagram
 apm install script
-apm install seti-ui
-apm install seti-syntax
+#apm install seti-ui
+#apm install seti-syntax
 apm install colorpicker
 apm install git-history
 apm install expose
