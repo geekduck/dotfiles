@@ -41,6 +41,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Marked
 alias md='open -a Marked'
 
+# Aatom
+alias a='atom .'
+
 # Sublime
 alias s='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl '
 
