@@ -37,6 +37,7 @@ case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
       apm install term2
+      ;;
     # Linux
     linux*)
       ;;
