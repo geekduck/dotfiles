@@ -10,6 +10,7 @@ apm install minimap-git-diff
 apm install minimap-highlight-selected
 apm install minimap-selection
 apm install minimap-split-diff
+apm install minimap-autohide
 apm install linter
 apm install linter-htmlhint
 apm install linter-jshint
