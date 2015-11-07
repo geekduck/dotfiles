@@ -28,7 +28,7 @@ apm install regex-railroad-diagram
 apm install script
 #apm install seti-ui
 #apm install seti-syntax
-apm install colorpicker
+apm install color-picker
 apm install git-history
 apm install expose
 apm install pdf-view
