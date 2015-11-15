@@ -33,6 +33,7 @@ apm install git-history
 apm install expose
 apm install pdf-view
 apm install autocomplete-emojis
+apm install docblockr
 
 case "${OSTYPE}" in
     # Mac(Unix)
