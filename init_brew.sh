@@ -15,7 +15,6 @@ brew install readline
 brew install wget
 brew install zsh
 brew install tmux
-# brew install lv
 brew install colordiff
 brew install tree
 brew install git
@@ -34,8 +33,6 @@ brew install pyenv
 brew install pyenv-virtualenv
 brew install nodebrew
 brew install emacs --cocoa
-# brew install nginx
-# brew install redis
 brew install go
 brew install awscli
 brew install peco
@@ -62,11 +59,9 @@ brew cask install bettertouchtool
 brew cask install evernote
 brew cask install handbrake
 brew cask install iterm2
-# brew cask install totalterminal
 # brew cask install dash
 brew cask install the-unarchiver
 brew cask install sourcetree
-# brew cask install yorufukurou
 brew cask install atom
 brew cask install adobe-reader
 brew cask install flash
