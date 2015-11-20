@@ -1,0 +1,47 @@
+# export
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home`
+
+# OCaml
+# alias ocaml='rlwrap ocaml'
+
+# git diff
+#export PATH=/usr/share/doc/git/contrib/diff-highlight:$PATH
+
+#export JAVA_OPTS="\
+#  -Xms14g -Xmx14g -XX:NewSize=1024m -XX:MaxNewSize=1024m\
+#  -XX:MaxTenuringThreshold=2 -XX:MaxPermSize=256m -XX:PermSize=256m\
+#  -Xmn100M -Xss2M\
+#  -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42\
+#  -XX:+AggressiveOpts -XX:+OptimizeStringConcat -XX:+UseFastAccessorMethods\
+#  -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled\
+#  -XX:+CMSClassUnloadingEnabled -XX:SurvivorRatio=8\
+#  -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly\
+#  -Dsun.rmi.dgc.client.gcInterval=600000\
+#  -Dsun.rmi.dgc.server.gcInterval=600000\
+#  -XX:+HeapDumpOnOutOfMemoryError\
+#  -verbose:gc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps\
+#  -XX:+PrintGCDetails -Xloggc:/var/log/jdk/verbosegc.log\
+#  -XX:-UseGCLogFileRotation\
+#"
+
+### API key
+# AWS
+export AWS_ACCESS_KEY_ID='hogehoge'
+export AWS_SECRET_ACCESS_KEY='hogehoge'
+
+# DigitalOcean
+export DO_CLIENT_ID='hogehoge'
+export DO_API_KEY='hogehoge'
+export DO_TOKEN='hogehoge'
+
+# Slack hubot
+export HUBOT_SLACK_TOKEN='hogehoge'
+export HUBOT_SLACK_TEAM='hogehoge'
+
+# Yahoo Developer API
+export YAHOO_DEV_API_TOKEN='hogehoge'
+
+# Hashicorp
+export ATLAS_TOKEN='hogehoge'
