@@ -7,6 +7,8 @@ do
     ( [ -s $HOME/$file ] || [ -d $HOME/$file ] )  || ln -s `pwd`/$file $HOME/$file
 done
 
+( [ -s $HOME/.zshr.local ] || [ -d $HOME/.zshr.local ] )  || cp `pwd`/.zshr.local $HOME/.zshr.local 
+
 # OS毎の設定
 case "${OSTYPE}" in
     # Mac(Unix)
