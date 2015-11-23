@@ -66,6 +66,7 @@ brew cask install atom
 brew cask install adobe-reader
 brew cask install flash
 brew cask install dockertoolbox
+brew cask install visual-studio-code
 
 # link /Applications
 brew linkapps
