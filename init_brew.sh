@@ -56,6 +56,7 @@ brew cask install bartender
 brew cask install intellij-idea
 brew cask install webstorm
 brew cask install bettertouchtool
+brew cask install karabiner
 brew cask install evernote
 brew cask install handbrake
 brew cask install iterm2
