@@ -7,7 +7,7 @@ do
     ( [ -s $HOME/$file ] || [ -d $HOME/$file ] )  || ln -s `pwd`/$file $HOME/$file
 done
 
-( [ -s $HOME/.zshr.local ] || [ -d $HOME/.zshrc.local ] )  || cp `pwd`/.zshr.local $HOME/.zshrc.local 
+( [ -s $HOME/.zshrc.local ] || [ -d $HOME/.zshrc.local ] )  || cp `pwd`/.zshrc.local $HOME/.zshrc.local
 
 # OS毎の設定
 case "${OSTYPE}" in
