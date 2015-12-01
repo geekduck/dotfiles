@@ -44,9 +44,6 @@ alias md='open -a Marked'
 # Aatom
 alias a='atom .'
 
-# Sublime
-alias s='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl '
-
 # "このアプリケーションで開く"をクリア
 alias clearmenu="cd /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support && ./lsregister -kill -r -domain system -domain local -domain user && killall Finder && cd"
 
