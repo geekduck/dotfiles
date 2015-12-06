@@ -22,8 +22,8 @@ path=(
 export LANG=ja_JP.UTF-8
 
 # リモートから起動するコマンド用の環境変数を設定(必要なら)
-export RSYNC_RSH=ssh
-export CVS_RSH=ssh
+#export RSYNC_RSH=ssh
+#export CVS_RSH=ssh
 
 # EDITOR
 export EDITOR='emacsclient -t'
