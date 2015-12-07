@@ -64,11 +64,49 @@ chpwd() {
 case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
+      # rbenv
+      if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+      # plenv
+      if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+
+      # pyenv
+      if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+      # golang
+      if which go > /dev/null; then
+        [[ ! -d "$HOME/.golang" ]] && mkdir "$HOME/.golang"
+        export GOPATH="$HOME/.golang"
+        export PATH="$GOPATH/bin:$PATH"
+      fi
+
       # ここに設定
       [[ -s ~/.zshrc.osx ]] && source "$HOME/.zshrc.osx"
       ;;
     # Linux
     linux*)
+      # rbenv
+      [[ -d "$HOME/.rbenv" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+
+      # nodebrew
+      [[ -d "$HOME/.nodebrew" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+      # plenv
+      [[ -d "$HOME/.plenv" ]] && export PATH="$HOME/.plenv/bin:$PATH" && eval "$(plenv init -)"
+
+      # pyenv
+      [[ -d "$HOME/.pyenv" ]] && export PATH="$HOME/.pyenv/bin:$PATH" && eval "$(pyenv init -)"
+
+      # golang
+      if which go > /dev/null; then
+        [[ ! -d "$HOME/.golang" ]] && mkdir "$HOME/.golang"
+        export GOPATH="$HOME/.golang"
+        export PATH="$GOPATH/bin:$PATH"
+      fi
+
       # ここに設定
       [[ -s ~/.zshrc.linux ]] && source "$HOME/.zshrc.linux"
       ;;
