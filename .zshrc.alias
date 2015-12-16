@@ -14,7 +14,7 @@ alias which=/usr/bin/which
 alias vi=vim
 
 # less 色 行数
-alias less='less -RM'
+alias less='less -RMI'
 
 # lv
 # alias lv='lv -c -Au8'
