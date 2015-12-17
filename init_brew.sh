@@ -55,6 +55,7 @@ brew cask install vmware-fusion
 brew cask install bartender
 brew cask install intellij-idea
 brew cask install webstorm
+brew cask install datagrip
 brew cask install bettertouchtool
 brew cask install karabiner
 brew cask install evernote
