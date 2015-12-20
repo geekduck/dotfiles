@@ -18,7 +18,7 @@ export INFOPATH
 #export MAVEN_OPTS=-Xmx1024M
 
 # alias
-alias redcar='redcar --ignore-stdin --fork'
+#alias redcar='redcar --ignore-stdin --fork'
 alias open=xdg-open
 
 # emacs
