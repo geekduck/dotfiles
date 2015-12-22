@@ -157,6 +157,7 @@ alias -g GV='| grep -vn --color-always'
 alias -g xG='| xargs grep -in --color=always '
 alias -g xGV='| xargs grep -vn --color=always '
 alias -g CP='| pbcopy '
+alias PA='pbpaste '
 
 # vagrant
 alias v="vagrant"
