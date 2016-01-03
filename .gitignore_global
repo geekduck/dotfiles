@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/OSX.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/OSX.gitignore
 
 .DS_Store
 .AppleDouble
@@ -26,7 +26,7 @@ Temporary Items
 .apdisk
 
 
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/Windows.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/Windows.gitignore
 
 # Windows image file caches
 Thumbs.db
@@ -48,9 +48,12 @@ $RECYCLE.BIN/
 *.lnk
 
 
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/Linux.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/Linux.gitignore
 
 *~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
 # KDE directory preferences
 .directory
@@ -59,7 +62,7 @@ $RECYCLE.BIN/
 .Trash-*
 
 
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/Emacs.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/Emacs.gitignore
 
 # -*- mode: gitignore; -*-
 *~
@@ -95,7 +98,7 @@ tramp
 .cask/
 
 
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/Vim.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/Vim.gitignore
 
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
@@ -105,7 +108,7 @@ Session.vim
 *~
 
 
-### https://raw.github.com/github/gitignore/7adc93eed241301cd4e5e6860983dbba1d63e000/Global/JetBrains.gitignore
+### https://raw.github.com/github/gitignore/fceac113a3a20e00718d6317e468eec27f6e2d99/Global/JetBrains.gitignore
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 
