@@ -25,7 +25,7 @@ apm install pigments
 apm install pretty-json
 apm install file-icons
 apm install regex-railroad-diagram
-apm install script
+#apm install script
 #apm install seti-ui
 #apm install seti-syntax
 apm install color-picker
