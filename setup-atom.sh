@@ -34,6 +34,7 @@ apm install expose
 apm install pdf-view
 apm install autocomplete-emojis
 apm install docblockr
+apm install atom-terminal
 
 case "${OSTYPE}" in
     # Mac(Unix)
