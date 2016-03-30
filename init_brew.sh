@@ -69,6 +69,7 @@ brew cask install adobe-reader
 brew cask install flash
 brew cask install dockertoolbox
 brew cask install visual-studio-code
+brew cask install macid
 
 # link /Applications
 brew linkapps
