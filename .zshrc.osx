@@ -34,6 +34,7 @@ alias ec="open -a Emacs "
 # Homebrew
 alias bu='brew update&&brew upgrade --all '
 alias bcu='brew cask update && brew cask list | xargs brew cask install 2> /dev/null '
+export HOMEBREW_NO_ANALYTICS=1
 
 # Homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
