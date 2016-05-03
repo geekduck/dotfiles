@@ -1,6 +1,7 @@
 [user]
 	name = geekduck
 	email = duck1218+github@gmail.com
+	username = geekduck
 [color]
 	# colorの設定(以下のコマンドは自動で色つける)
 	ui = auto
