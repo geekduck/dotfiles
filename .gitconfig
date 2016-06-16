@@ -53,3 +53,5 @@
 	default = simple
 [ghq]
 	root = ~/workspace
+[diff]
+	compactionHeuristic = true
