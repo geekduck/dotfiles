@@ -60,6 +60,7 @@ brew cask install the-unarchiver
 brew cask install atom
 brew cask install visual-studio-code
 brew cask install macid
+brwe cask install sketch
 
 # link /Applications
 brew linkapps
