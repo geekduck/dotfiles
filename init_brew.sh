@@ -43,31 +43,21 @@ brew install source-highlight
 brew install packer
 
 # install GUI Applications
-# brew cask install google-chrome
-# brew cask install google-japanese-ime
-# brew cask install firefox
 brew cask install dropbox
 brew cask install java
 brew cask install vagrant
 brew cask install alfred
 brew cask install vmware-fusion
-# brew cask install sublime-text
+brew cask install sublime-text
 brew cask install bartender
 brew cask install intellij-idea
 brew cask install webstorm
 brew cask install datagrip
 brew cask install bettertouchtool
 brew cask install karabiner
-brew cask install evernote
-brew cask install handbrake
-brew cask install iterm2
-# brew cask install dash
+brew cask install dash
 brew cask install the-unarchiver
-brew cask install sourcetree
 brew cask install atom
-brew cask install adobe-reader
-brew cask install flash
-brew cask install dockertoolbox
 brew cask install visual-studio-code
 brew cask install macid
 
