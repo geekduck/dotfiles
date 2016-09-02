@@ -32,7 +32,7 @@ brew install perl-build
 brew install pyenv
 brew install pyenv-virtualenv
 brew install nodebrew
-brew install emacs --cocoa
+brew install emacs --with-cocoa
 brew install go
 brew install awscli
 brew install peco
