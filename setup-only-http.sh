@@ -30,7 +30,7 @@ esac
 git clone https://github.com/geekduck/emacs.d.git ~/.emacs.d
 
 # antigen.zshのダウンロード
-curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh
+curl https://cdn.rawgit.com/zsh-users/antigen/v1.1.1/bin/antigen.zsh > ~/.antigen.zsh
 
 # imgcatのダウンロード
 curl -sfL -o /usr/local/bin/imgcat https://raw.github.com/gnachman/iTerm2/master/tests/imgcat -O && chmod +x /usr/local/bin/imgcat
