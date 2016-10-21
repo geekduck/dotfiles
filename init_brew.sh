@@ -54,7 +54,7 @@ brew cask install intellij-idea
 brew cask install webstorm
 brew cask install datagrip
 brew cask install bettertouchtool
-brew cask install karabiner
+# brew cask install karabiner
 brew cask install dash
 brew cask install the-unarchiver
 brew cask install atom
