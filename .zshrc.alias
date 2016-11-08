@@ -194,5 +194,5 @@ bindkey '^r' peco-select-history
 
 # Update all repository
 function ghq-update() {
-  ghq list | sed -E 's/^[^\/]+\/(.+)/\1/' | xargs -n 1 -P 10 ghq get -u
+  ghq list | grep github | sed -E 's/^[^\/]+\/(.+)/\1/' | xargs -n 1 -P 10 ghq get -u
 }
