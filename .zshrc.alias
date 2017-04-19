@@ -29,8 +29,8 @@ alias tm='tmux'
 alias tma='tmux attach'
 alias tml='tmux list-window'
 
-# simple server
-alias server="python -m SimpleHTTPServer "
+# simple server(require python3)
+alias server="python -m http.server "
 
 # pretty-print JSON
 pretty-print-json () {
