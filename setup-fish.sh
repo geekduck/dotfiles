@@ -12,7 +12,8 @@ case "${OSTYPE}" in
     darwin*)
     [ ! -d $HOME/.config ] && mkdir -p $HOME/.config
     [ ! -d $HOME/.config/peco ] && ln -s `pwd`/.config/peco $HOME/.config/peco
-    [ ! -d $HOME/.config ] && ln -sf `pwd`/fish $HOME/.config/fish
+    [ -d $HOME/.config/fish ] && mv $HOME/.config/fish $HOME/.config/fish_back
+    [ ! -d $HOME/.config/fish ] && ln -snf `pwd`/fish $HOME/.config/fish
 
     # imgcatのダウンロード
     curl -sfL -o /usr/local/bin/imgcat https://raw.github.com/gnachman/iTerm2/master/tests/imgcat -O && chmod +x /usr/local/bin/imgcat
@@ -21,7 +22,8 @@ case "${OSTYPE}" in
     linux*)
     [ ! -d $HOME/.config ] && mkdir -p $HOME/.config
     [ ! -d $HOME/.config/peco ] && ln -s `pwd`/.config/peco $HOME/.config/peco
-    [ ! -d $HOME/.config ] && ln -sf `pwd`/fish $HOME/.config/fish
+    [ -d $HOME/.config/fish ] && mv $HOME/.config/fish $HOME/.config/fish_back
+    [ ! -d $HOME/.config/fish ] && ln -snf `pwd`/fish $HOME/.config/fish
     ;;
 esac
 

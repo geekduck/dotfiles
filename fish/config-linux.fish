@@ -1,6 +1,6 @@
 # environment variables
 ## LESS
-[ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ] && set -x LESSOPEN '| /usr/share/source-highlight/src-hilite-lesspipe.sh %s '
+[ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]; and set -x LESSOPEN '| /usr/share/source-highlight/src-hilite-lesspipe.sh %s '
 
 # rbenv
 if [ -d "$HOME/.rbenv" ]
