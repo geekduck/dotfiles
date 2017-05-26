@@ -1,4 +1,5 @@
 fish/completions
 fish/conf.d
 fish/functions
+fish/fish_history
 fish/fishd.*
