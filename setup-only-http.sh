@@ -4,25 +4,25 @@ DOT_FILES=( .zshrc .zshrc.alias .zshrc.env .zshrc.git .zshenv .zlogin .zshrc.com
 
 for file in ${DOT_FILES[@]}
 do
-    ( [ -s $HOME/$file ] || [ -d $HOME/$file ] )  || ln -s `pwd`/$file $HOME/$file
+    ( [ -s $HOME/$file ] || [ -d $HOME/$file ] )  || ln -s `pwd`/zsh/$file $HOME/$file
 done
 
-( [ -s $HOME/.zshrc.local ] || [ -d $HOME/.zshrc.local ] )  || cp `pwd`/.zshrc.local $HOME/.zshrc.local
+( [ -s $HOME/.zshrc.local ] || [ -d $HOME/.zshrc.local ] )  || cp `pwd`/zsh/.zshrc.local $HOME/.zshrc.local
 
 # OS毎の設定
 case "${OSTYPE}" in
     # Mac(Unix)
     darwin*)
-    [ -s $HOME/.zshrc.osx ]  || ln -s `pwd`/.zshrc.osx $HOME/.zshrc.osx
+    [ -s $HOME/.zshrc.osx ]  || ln -s `pwd`/zsh/.zshrc.osx $HOME/.zshrc.osx
     mkdir /usr/local/sbin
     [ -s $HOME/.config ] || mkdir -p $HOME/.config
-    [ -s $HOME/.config/peco ] || ln -s `pwd`/.config/peco $HOME/.config/peco
+    [ -s $HOME/.config/peco ] || ln -s `pwd`/zsh/.config/peco $HOME/.config/peco
     ;;
     # Linux
     linux*)
-    [ -s $HOME/.zshrc.linux ]  || ln -s `pwd`/.zshrc.linux $HOME/.zshrc.linux
+    [ -s $HOME/.zshrc.linux ]  || ln -s `pwd`/zsh/.zshrc.linux $HOME/.zshrc.linux
     [ -d $HOME/.config ] || mkdir -p $HOME/.config
-    [ -d $HOME/.config/peco ] || ln -s `pwd`/.config/peco $HOME/.config/peco
+    [ -d $HOME/.config/peco ] || ln -s `pwd`/zsh/.config/peco $HOME/.config/peco
     ;;
 esac
 
