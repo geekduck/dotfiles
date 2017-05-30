@@ -27,6 +27,9 @@ if which go > /dev/null
     set -x PATH $PATH $GOPATH/bin
 end
 
+# sdkman
+#[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; and source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # git highlight
 set -x PATH $PATH /usr/local/share/git-core/contrib/diff-highlight
 
@@ -40,10 +43,10 @@ function es
 end
 alias ek="emacsclient -e '(kill-emacs)' "
 function e
-    if ! pgrep -i emacs >/dev/null 2>&1
+    if not pgrep -i emacs >/dev/null 2>&1
         which emacs >/dev/null 2>&1; and emacs --daemon >/dev/null 2>&1
     else
-        emacsclient -t @argv
+        emacsclient -t $argv
     end
 end
 alias ec="open -a Emacs "
