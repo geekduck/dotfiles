@@ -4,7 +4,7 @@
 
 # rbenv
 if which plenv > /dev/null
-    rbenv init - | source
+    . (rbenv init -|psub) > /dev/null 2>&1
 end
 
 # nodebrew
@@ -12,12 +12,12 @@ end
 
 # plenv
 if which plenv > /dev/null
-    plenv init - | source
+    . (plenv init -|psub) > /dev/null 2>&1
 end
 
 # pyenv
 if which pyenv > /dev/null
-    pyenv init - | source
+    . (pyenv init -|psub) > /dev/null 2>&1
 end
 
 # golang
