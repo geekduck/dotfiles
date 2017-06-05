@@ -5,7 +5,7 @@
 # rbenv
 if [ -d "$HOME/.rbenv" ]
     set -x PATH $PATH $HOME/.rbenv/bin
-    rbenv init - | source
+    . (rbenv init -|psub) > /dev/null 2>&1
 end
 
 # nodebrew
@@ -14,13 +14,13 @@ end
 # plenv
 if [ -d "$HOME/.plenv" ]
     set -x PATH $PATH $HOME/.plenv/bin
-    plenv init - | source
+    . (plenv init -|psub) > /dev/null 2>&1
 end
 
 # pyenv
 if [ -d "$HOME/.pyenv" ]
     set -x PATH $PATH $HOME/.pyenv/bin
-    pyenv init - | source
+    . (pyenv init -|psub) > /dev/null 2>&1
 end
 
 # golang
@@ -34,8 +34,7 @@ end
 #[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; and source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # git highlight
-set -x PATH $PATH /usr/share/doc/git/contrib/diff-highlight
-
+[ -d /usr/share/doc/git/contrib/diff-highlight ]; and set -x PATH $PATH /usr/share/doc/git/contrib/diff-highlight
 
 # alias
 alias open=xdg-open
