@@ -3,8 +3,8 @@
 [ -f /usr/local/bin/src-hilite-lesspipe.sh ]; and set -x LESSOPEN '| /usr/local/bin/src-hilite-lesspipe.sh %s '
 
 # rbenv
-if which plenv > /dev/null
-    . (rbenv init -|psub) > /dev/null 2>&1
+if which rbenv > /dev/null
+    status --is-interactive; and source (rbenv init -|psub)
 end
 
 # nodebrew
@@ -12,12 +12,12 @@ end
 
 # plenv
 if which plenv > /dev/null
-    . (plenv init -|psub) > /dev/null 2>&1
+    status --is-interactive; and source (plenv init -|psub)
 end
 
 # pyenv
 if which pyenv > /dev/null
-    . (pyenv init -|psub) > /dev/null 2>&1
+    status --is-interactive; and source (pyenv init -|psub)
 end
 
 # golang

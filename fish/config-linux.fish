@@ -5,7 +5,7 @@
 # rbenv
 if [ -d "$HOME/.rbenv" ]
     set -x PATH $PATH $HOME/.rbenv/bin
-    . (rbenv init -|psub) > /dev/null 2>&1
+    status --is-interactive; and source (rbenv init -|psub)
 end
 
 # nodebrew
@@ -14,13 +14,13 @@ end
 # plenv
 if [ -d "$HOME/.plenv" ]
     set -x PATH $PATH $HOME/.plenv/bin
-    . (plenv init -|psub) > /dev/null 2>&1
+    status --is-interactive; and source (plenv init -|psub)
 end
 
 # pyenv
 if [ -d "$HOME/.pyenv" ]
     set -x PATH $PATH $HOME/.pyenv/bin
-    . (pyenv init -|psub) > /dev/null 2>&1
+    status --is-interactive; and source (pyenv init -|psub)
 end
 
 # golang
