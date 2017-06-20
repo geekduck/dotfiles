@@ -32,7 +32,7 @@ function extract
         switch $argv[1]
             case '*.tar.bz2'
                 tar xvjf $argv[1]
-            case '*.tar.xz'
+            case '*.tar.gz'
                 tar xvJf $argv[1]
             case '*.bz2'
                 bunzip2 $argv[1]
