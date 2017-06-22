@@ -33,6 +33,8 @@ function extract
             case '*.tar.bz2'
                 tar xvjf $argv[1]
             case '*.tar.gz'
+                tar xvzf $argv[1]
+            case '*.tar.xz'
                 tar xvJf $argv[1]
             case '*.bz2'
                 bunzip2 $argv[1]
