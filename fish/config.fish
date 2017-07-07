@@ -14,6 +14,9 @@ set -x LESS '-R -j10 --no-init --quit-if-one-screen'
 set -x JLESSCHARSET japanese
 set -x LESSCHARSET utf-8
 
+## LS
+set -x LSCOLORS ExFxCxDxBxegedabagacad
+
 ## ghq
 set -x GHQ_SELECTOR peco
 
