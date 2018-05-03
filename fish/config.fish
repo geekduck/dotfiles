@@ -37,3 +37,6 @@ end
 
 # key bindings
 [ -f ~/.config/fish/config-keybindings.fish ]; and . ~/.config/fish/config-keybindings.fish
+
+# load theme config
+[ -f ~/.config/fish/config-theme.fish ]; and . ~/.config/fish/config-theme.fish
