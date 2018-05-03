@@ -3,7 +3,7 @@
 set -x LANG ja_JP.UTF-8
 
 ## EDITOR
-export EDITOR='emacsclient -t'
+set -x EDITOR 'emacsclient -t'
 
 ## PAGER
 set -x PAGER less
