@@ -20,6 +20,11 @@ if which pyenv > /dev/null
     status --is-interactive; and source (pyenv init -|psub)
 end
 
+# goenv
+if which goenv > /dev/null
+    status --is-interactive; and source (goenv init -|psub)
+end
+
 # golang
 if which go > /dev/null
     [ ! -d "$HOME/.golang" ]; and mkdir -p "$HOME/.golang/bin"

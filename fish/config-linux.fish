@@ -23,6 +23,12 @@ if [ -d "$HOME/.pyenv" ]
     status --is-interactive; and source (pyenv init -|psub)
 end
 
+# goenv
+if [ -d "$HOME/.goenv" ]
+    set -x PATH $PATH $HOME/.goenv/bin
+    status --is-interactive; and source (goenv init -|psub)
+end
+
 # golang
 if which go > /dev/null
     [ ! -d "$HOME/.golang" ]; and mkdir -p "$HOME/.golang/bin"
