@@ -4,28 +4,28 @@
 
 # rbenv
 if [ -d "$HOME/.rbenv" ]
-    set -x PATH $PATH $HOME/.rbenv/bin
+    set -x PATH $HOME/.rbenv/bin $PATH
     status --is-interactive; and source (rbenv init -|psub)
 end
 
 # nodebrew
-[ -d "$HOME/.nodebrew" ]; and set -x PATH $PATH $HOME/.nodebrew/current/bin
+[ -d "$HOME/.nodebrew" ]; and set -x PATH $HOME/.nodebrew/current/bin $PATH
 
 # plenv
 if [ -d "$HOME/.plenv" ]
-    set -x PATH $PATH $HOME/.plenv/bin
+    set -x PATH $HOME/.plenv/bin $PATH
     status --is-interactive; and source (plenv init -|psub)
 end
 
 # pyenv
 if [ -d "$HOME/.pyenv" ]
-    set -x PATH $PATH $HOME/.pyenv/bin
+    set -x PATH $HOME/.pyenv/bin $PATH
     status --is-interactive; and source (pyenv init -|psub)
 end
 
 # goenv
 if [ -d "$HOME/.goenv" ]
-    set -x PATH $PATH $HOME/.goenv/bin
+    set -x PATH $HOME/.goenv/bin $PATH
     status --is-interactive; and source (goenv init -|psub)
 end
 
@@ -33,14 +33,14 @@ end
 if which go > /dev/null
     [ ! -d "$HOME/.golang" ]; and mkdir -p "$HOME/.golang/bin"
     set -x GOPATH $HOME/.golang
-    set -x PATH $PATH $GOPATH/bin
+    set -x PATH $GOPATH/bin $PATH
 end
 
 #sdkman
 #[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; and source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # git highlight
-[ -d /usr/share/doc/git/contrib/diff-highlight ]; and set -x PATH $PATH /usr/share/doc/git/contrib/diff-highlight
+[ -d /usr/share/doc/git/contrib/diff-highlight ]; and set -x PATH /usr/share/doc/git/contrib/diff-highlight $PATH
 
 # alias
 alias open=xdg-open
