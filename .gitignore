@@ -3,3 +3,5 @@ fish/conf.d
 fish/functions
 fish/fish_history
 fish/fishd.*
+fish/fish_variables
+
