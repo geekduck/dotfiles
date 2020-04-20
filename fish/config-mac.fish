@@ -11,7 +11,8 @@ end
 [ -d "$HOME/.nodebrew" ]; and set -x PATH $PATH $HOME/.nodebrew/current/bin
 
 # plenv
-if which plenv > /dev/null
+if [ -d "$HOME/.plenv" ]
+    set -x PATH $HOME/.plenv/bin $PATH
     status --is-interactive; and source (plenv init -|psub)
 end
 
