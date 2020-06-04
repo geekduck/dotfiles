@@ -20,9 +20,14 @@
 	diff = diff-highlight | less
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[merge]
+        tool = vscode
+[mergetool]
+        prompt = false
+        keepBackup = false
+[mergetool "vscode"]
+	cmd = '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \"$MERGED\"
+	trustExitCode = false
 [include]
 	path = ~/.gitconfig.local
 [alias]
