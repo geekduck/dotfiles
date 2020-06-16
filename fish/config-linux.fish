@@ -15,6 +15,7 @@ end
 if [ -d "$HOME/.plenv" ]
     set -x PATH $HOME/.plenv/bin $PATH
     status --is-interactive; and source (plenv init -|psub)
+    status --is-interactive; and source (pyenv virtualenv-init -|psub)
 end
 
 # pyenv
