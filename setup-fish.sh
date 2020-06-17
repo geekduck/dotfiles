@@ -28,7 +28,7 @@ case "${OSTYPE}" in
 esac
 
 # fisherman
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisherman
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 # gitのセットアップ
 ./setup-git.sh
