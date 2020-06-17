@@ -22,10 +22,6 @@ function safe-rm
 end
 alias rm=safe-rm
 
-function ping
-    ping -c 4 $argv
-end
-
 ## extract
 function extract
     if test -f $argv[1]
