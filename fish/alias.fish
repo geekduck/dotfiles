@@ -7,7 +7,12 @@ alias less='less -RMI '
 ## lv
 #alias lv='lv -c -Au8 '
 
-# simple server(require python3)
+## tree
+alias t1='tree -L 1'
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+
+## simple server(require python3)
 function server
     python -m http.server $argv
 end
