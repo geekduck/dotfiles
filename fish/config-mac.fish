@@ -23,7 +23,8 @@ if which pyenv > /dev/null
 end
 
 # goenv
-if which goenv > /dev/null
+if [ -d "$HOME/.goenv" ]
+    set -x PATH $HOME/.goenv/bin $PATH
     status --is-interactive; and source (goenv init -|psub)
 end
 
