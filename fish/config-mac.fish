@@ -7,9 +7,6 @@ if which rbenv > /dev/null
     status --is-interactive; and source (rbenv init -|psub)
 end
 
-# nodebrew
-[ -d "$HOME/.nodebrew" ]; and set -x PATH $PATH $HOME/.nodebrew/current/bin
-
 # volta
 if which volta > /dev/null
     set -gx VOLTA_HOME "$HOME/.volta"
