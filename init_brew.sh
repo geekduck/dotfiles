@@ -32,6 +32,7 @@ brew install perl-build
 brew install pyenv
 brew install pyenv-virtualenv
 brew install nodebrew
+brew install volta
 brew install emacs --with-cocoa
 brew install go
 brew install awscli
