@@ -10,6 +10,12 @@ end
 # nodebrew
 [ -d "$HOME/.nodebrew" ]; and set -x PATH $PATH $HOME/.nodebrew/current/bin
 
+# volta
+if which volta > /dev/null
+    set -gx VOLTA_HOME "$HOME/.volta"
+    set -gx PATH "$VOLTA_HOME/bin" $PATH
+end
+
 # plenv
 if [ -d "$HOME/.plenv" ]
     set -x PATH $HOME/.plenv/bin $PATH
