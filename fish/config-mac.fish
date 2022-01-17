@@ -1,48 +1,53 @@
 # environment variables
-## LESS
-[ -f /usr/local/bin/src-hilite-lesspipe.sh ]; and set -x LESSOPEN '| /usr/local/bin/src-hilite-lesspipe.sh %s '
 
-# rbenv
+## Homebrew
+eval (brew shellenv)
+set -x HOMEBREW_NO_ANALYTICS 1
+
+## LESS
+[ -f "$HOMEBREW_PREFIX"/bin/src-hilite-lesspipe.sh ]; and set -x LESSOPEN '| "$HOMEBREW_PREFIX"/bin/src-hilite-lesspipe.sh %s '
+
+## rbenv
 if which rbenv > /dev/null
     status --is-interactive; and source (rbenv init -|psub)
 end
 
-# volta
+## volta
 if which volta > /dev/null
     set -gx VOLTA_HOME "$HOME/.volta"
     set -gx PATH "$VOLTA_HOME/bin" $PATH
 end
 
-# plenv
+## plenv
 if [ -d "$HOME/.plenv" ]
     set -x PATH $HOME/.plenv/bin $PATH
     status --is-interactive; and source (plenv init -|psub)
     # status --is-interactive; and source (pyenv virtualenv-init -|psub)
 end
 
-# pyenv
+## pyenv
 if which pyenv > /dev/null
     status --is-interactive; and eval (pyenv init --path)
 end
 
-# goenv
+## goenv
 if [ -d "$HOME/.goenv" ]
     set -x PATH $HOME/.goenv/bin $PATH
     status --is-interactive; and source (goenv init -|psub)
 end
 
-# rust
+## rust
 if [ -d "$HOME/.cargo" ]
     set -x PATH $HOME/.cargo/bin $PATH
 end
 
-# sdkman
+## sdkman
 #[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; and source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# git highlight
-set -x PATH $PATH /usr/local/share/git-core/contrib/diff-highlight
+## git highlight
+set -x PATH $PATH "$HOMEBREW_PREFIX"/share/git-core/contrib/diff-highlight
 
-# emacs
+## emacs
 function es
     if pgrep -i emacs >/dev/null 2>&1
         echo "Emacs server is already running..."
@@ -60,15 +65,14 @@ function e
 end
 alias ec="open -a Emacs "
 
-# Homebrew
+
+# alias
+
+## homebrew
 alias bu='brew update; brew upgrade '
-set -x HOMEBREW_NO_ANALYTICS 1
 
-# Homebrew cask
-set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
-
-# zcat
+## zcat
 alias zcat=gzcat
 
-# "このアプリケーションで開く"をクリア
+## "このアプリケーションで開く"をクリア
 alias clearmenu="cd /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support; and ./lsregister -kill -r -domain system -domain local -domain user; and killall Finder; and cd"
