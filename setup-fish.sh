@@ -16,7 +16,7 @@ case "${OSTYPE}" in
     [ ! -d $HOME/.config/fish ] && ln -snf `pwd`/fish $HOME/.config/fish
 
     # imgcatのダウンロード
-    curl -sfL -o /usr/local/bin/imgcat https://raw.github.com/gnachman/iTerm2/master/tests/imgcat -O && chmod +x /usr/local/bin/imgcat
+    curl -sfL -o /usr/local/bin/imgcat https://iterm2.com/utilities/imgcat -O && chmod +x /usr/local/bin/imgcat
     ;;
     # Linux
     linux*)
@@ -33,6 +33,6 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 # gitのセットアップ
 ./setup-git.sh
 
-# zsh reload
+# fish reload
 [ -s /usr/local/bin/fish ] && exec /usr/local/bin/fish -l
 [ -s /usr/bin/fish ] && exec /usr/bin/fish -l
