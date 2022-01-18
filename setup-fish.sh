@@ -30,6 +30,10 @@ esac
 # fisherman
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
+# fuzzy finderのプレビュー用スクリプト
+curl https://raw.githubusercontent.com/junegunn/fzf.vim/master/bin/preview.sh -sLo /usr/local/bin/preview.sh
+chmod +x /usr/local/bin/preview.sh
+
 # gitのセットアップ
 ./setup-git.sh
 
