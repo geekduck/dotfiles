@@ -19,3 +19,16 @@ alias gs='git status -s -b'
 alias gst='git status'
 alias gn='git now -s'
 alias gan='git add .; and git now -s'
+
+## grep
+function gp
+    git grep -i --break $argv[1] -- $argv[2]
+end
+
+## open file
+function gopen
+    set P (git grep -i --break $argv[1] -- $argv[2] | peco | awk -F: '{print $1}')
+    if test -n "$P"
+        eval "$EDITOR" "$P"
+    end
+end
