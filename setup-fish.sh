@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=( .gitconfig .tmux.conf .dir_colors .gemrc .git_templates .gitignore_global )
+DOT_FILES=( .gitconfig .tmux.conf .dir_colors .gemrc .git_templates .gitignore_global .tigrc )
 
 for file in ${DOT_FILES[@]}
 do
