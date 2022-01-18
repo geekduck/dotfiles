@@ -25,10 +25,8 @@ function gp
     git grep -i --break $argv[1] -- $argv[2]
 end
 
-## open file
-function gopen
-    set P (git grep -i --break $argv[1] -- $argv[2] | peco | awk -F: '{print $1}')
-    if test -n "$P"
-        eval "$EDITOR" "$P"
-    end
-end
+## open file in tig
+alias ot='tig (fd -t f | sk --layout=reverse-list --preview "bat --style=numbers --color=always {}")'
+
+## grep file and open in tig
+alias gt='tig (sk --layout=reverse-list --ansi -i -c \'git grep -i --color=always --line-number "{}"\' --preview \'echo {} | awk -F: \\\'{print $1}\\\' | xargs bat --style=numbers --color=always \' | awk -F: \'{print $1}\')'

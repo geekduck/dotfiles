@@ -12,6 +12,12 @@ alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
 
+## interactive grep
+alias skg='sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\''
+
+## file preview
+alias fp='fd -t f | sk --layout=reverse-list --preview "bat --style=numbers --color=always {}"'
+
 ## simple server(require python3)
 function server
     python -m http.server $argv
@@ -82,6 +88,7 @@ function chpwd --on-variable PWD
     end
 end
 
+## git
 function __show_current_dir_and_git_status
     ls
     if git rev-parse --is-inside-work-tree > /dev/null 2>&1
@@ -91,6 +98,7 @@ function __show_current_dir_and_git_status
     end
 end
 
+## empty enter
 function done_enter
     if test -z (commandline)
         echo

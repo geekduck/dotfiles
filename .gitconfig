@@ -11,23 +11,18 @@
 	interactive = auto
 	grep = auto
 [core]
+	pager = delta 2>/dev/null || cat
 	quotepath = false
 	excludesfile = ~/.gitignore_global
-	editor = emacsclient -t
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[interactive]
+    diffFilter = delta --color-only 2>/dev/null || cat
+[diff]
+	colorMoved = default
+	compactionHeuristic = true
+[grep]
+	lineNumber = true
 [merge]
-        tool = vscode
-[mergetool]
-        prompt = false
-        keepBackup = false
-[mergetool "vscode"]
-	cmd = '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \"$MERGED\"
-	trustExitCode = false
+	conflictstyle = diff3
 [include]
 	path = ~/.gitconfig.local
 [alias]
@@ -60,5 +55,7 @@
 	ff = only
 [ghq]
 	root = ~/workspace
-[diff]
-	compactionHeuristic = true
+[delta]
+    navigate = true
+	side-by-side = true
+	line-numbers = true
