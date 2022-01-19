@@ -1,10 +1,8 @@
 decors/fish-ghq
 fisherman/done
 fisherman/getopts
-fisherman/git_util
 fisherman/gitignore
 fisherman/spin
 fisherman/z
-jorgebucaran/fisher
 oh-my-fish/theme-bobthefish
 reitzig/sdkman-for-fish@v1.4.0
