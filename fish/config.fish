@@ -17,9 +17,14 @@ set -x LESSCHARSET utf-8
 ## LS
 set -x LSCOLORS ExFxCxDxBxegedabagacad
 
+## fuzzy finder
+set -x FZF_DEFAULT_COMMAND "fd -t f"
+set -x FZF_DEFAULT_OPTS "--color fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#778899 --height 40% --layout=reverse-list --border --ansi "
+set -x FZF_CTRL_T_OPTS "--preview 'preview.sh {}'"
+set -x FZF_ALT_C_OPTS "--preview 'ls -al {}'"
+
 ## ghq
-set -x GHQ_SELECTOR sk
-set -x GHQ_SELECTOR_OPTS '--layout=reverse-list --ansi -i'
+set -x GHQ_SELECTOR fzf
 
 # load config
 switch (uname)
@@ -35,9 +40,6 @@ end
 # load alias config
 [ -f ~/.config/fish/alias.fish ]; and . ~/.config/fish/alias.fish
 [ -f ~/.config/fish/config-git.fish ]; and . ~/.config/fish/config-git.fish
-
-# key bindings
-[ -f ~/.config/fish/config-keybindings.fish ]; and . ~/.config/fish/config-keybindings.fish
 
 # load theme config
 [ -f ~/.config/fish/config-theme.fish ]; and . ~/.config/fish/config-theme.fish

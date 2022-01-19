@@ -12,11 +12,22 @@ alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
 
-## interactive grep
-alias grep-preview='sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\' --preview "preview.sh {}"'
+## grep preview
+function grep-preview
+    set -l grep_command
+    [ -n "$argv[1]" ]; and set grep_command "$argv[1]"; or set grep_command 'rg -i --color=always --line-number '
+
+    set -l initial_query
+    [ -n "$argv[2]" ]; and set initial_query "$argv[2]"; or set initial_query ""
+
+    env FZF_DEFAULT_COMMAND="$grep_command '$initial_query'" \
+      fzf --bind "change:reload:eval '$grep_command' \"{q}\" || true" \
+          --height 70% --disabled --query "$initial_query" --preview "preview.sh {}" \
+      | awk -F: '{print $1}'
+end
 
 ## file preview
-alias find-preview='fd -t f | sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\' --preview "preview.sh {}"'
+alias find-preview='fzf --height 70% --preview "preview.sh {}"'
 
 ## simple server(require python3)
 function server
@@ -107,18 +118,4 @@ function done_enter
         commandline -f execute
     end
     commandline -f repaint
-end
-
-## history fuzzy find
-function select_history
-  set -l fuzzy_finder sk
-  set -l fuzzy_finder_flags '--layout=reverse-list --ansi -i'
-
-  set -l command (history|$fuzzy_finder $fuzzy_finder_flags)
-
-  if [ $command ]
-    commandline $command
-  else
-    commandline ''
-  end
 end
