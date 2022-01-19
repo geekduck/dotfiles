@@ -26,7 +26,19 @@ function gp
 end
 
 ## open file in tig
-alias ot='tig (fd -t f | sk --layout=reverse-list --preview "bat --style=numbers --color=always {}")'
+function open-file-in-tig
+    set -l filename (fd -t f | sk --layout=reverse-list --preview "bat --style=numbers --color=always {}")
+    if test -n "$filename"
+        tig "$filename"
+    end
+end
+alias ot=open-file-in-tig
 
 ## grep file and open in tig
-alias gt='tig (sk --layout=reverse-list --ansi -i -c \'git grep -i --color=always --line-number "{}"\' --preview \'preview.sh {}\' | awk -F: \'{print $1}\')'
+function grep-file-and-open-in-tig
+    set -l filename (sk --layout=reverse-list --ansi -i -c 'git grep -i --color=always --line-number "{}"' --preview 'preview.sh {}' | awk -F: '{print $1}')
+    if test -n "$filename"
+        tig "$filename"
+    end
+end
+alias gt=grep-file-and-open-in-tig

@@ -13,10 +13,10 @@ alias t2='tree -L 2'
 alias t3='tree -L 3'
 
 ## interactive grep
-alias skg='sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\''
+alias grep-preview='sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\' --preview "preview.sh {}"'
 
 ## file preview
-alias fp='fd -t f | sk --layout=reverse-list --preview "bat --style=numbers --color=always {}"'
+alias find-preview='fd -t f | sk --layout=reverse-list --ansi -i -c \'rg --color=always --line-number "{}"\' --preview "preview.sh {}"'
 
 ## simple server(require python3)
 function server
