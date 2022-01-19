@@ -1,7 +1,11 @@
 # environment variables
 
 ## Homebrew
-eval (brew shellenv)
+if [ -d "/opt/homebrew/bin" ]
+    eval (/opt/homebrew/bin/brew shellenv)
+else
+    eval (/usr/local/bin/brew shellenv)
+end
 set -x HOMEBREW_NO_ANALYTICS 1
 
 ## LESS
