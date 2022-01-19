@@ -18,7 +18,8 @@ set -x LESSCHARSET utf-8
 set -x LSCOLORS ExFxCxDxBxegedabagacad
 
 ## ghq
-set -x GHQ_SELECTOR peco
+set -x GHQ_SELECTOR sk
+set -x GHQ_SELECTOR_OPTS '--layout=reverse-list --ansi -i'
 
 # load config
 switch (uname)
