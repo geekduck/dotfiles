@@ -108,3 +108,17 @@ function done_enter
     end
     commandline -f repaint
 end
+
+## history fuzzy find
+function select_history
+  set -l fuzzy_finder sk
+  set -l fuzzy_finder_flags '--layout=reverse-list --ansi -i'
+
+  set -l command (history|$fuzzy_finder $fuzzy_finder_flags)
+
+  if [ $command ]
+    commandline $command
+  else
+    commandline ''
+  end
+end
