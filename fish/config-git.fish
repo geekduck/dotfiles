@@ -42,3 +42,22 @@ function grep-file-and-open-in-tig
     end
 end
 alias gt=grep-file-and-open-in-tig
+
+## fuzzy branch select
+function branch-select
+    env FZF_DEFAULT_COMMAND='git --no-pager branch -a | grep -v HEAD | sed -e "s/^.* //g"' \
+        fzf --height 70% --prompt "BRANCH NAME>" \
+            --preview "git --no-pager log -20 --color=always {}"
+end
+
+## checkout branch
+function checkout-branch
+    set -l branchname (branch-select)
+    if string match -q "remotes/*" "$branchname"
+        set branchname ( echo "$branchname" | sed "s#remotes/[^/]*/##" )
+    end
+    if test -n "$branchname"
+        git checkout "$branchname"
+    end
+end
+alias co=checkout-branch
