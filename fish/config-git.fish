@@ -27,19 +27,20 @@ end
 
 ## fuzzy add
 function fuzzy-add
-    set -l selected ( env FZF_DEFAULT_COMMAND='git status -s' \
-                fzf -m --no-sort --height 60% --preview '
-                    if test (echo {} | grep -E "^M" | wc -l) -eq 1 # staged
-                        git diff --color --cached (echo {} | sed -e "s/^.* //g")
-                    else if test (echo {} | grep -E "^\?\?" | wc -l) -eq 0 # unstaged
-                        git diff --color (echo {} | sed -e \'s/^.* //g\')
-                    else if test -d (echo {} | sed -e "s/^.* //g") # directory
-                        ls -la (echo {} | sed -e \'s/^.* //g\')
-                    else
-                        git diff --color --no-index /dev/null (echo {} | sed -e "s/^.* //g") # untracked
-                    end
-                ' | \
-                awk -F ' ' '{print $NF}' )
+    set -l selected (
+        env FZF_DEFAULT_COMMAND='git status -s' \
+            fzf -m --no-sort --height 60% --preview '
+                if test (echo {} | grep -E "^M" | wc -l) -eq 1 # staged
+                    git diff --color --cached (echo {} | sed -e "s/^.* //g")
+                else if test (echo {} | grep -E "^\?\?" | wc -l) -eq 0 # unstaged
+                    git diff --color (echo {} | sed -e \'s/^.* //g\')
+                else if test -d (echo {} | sed -e "s/^.* //g") # directory
+                    ls -la (echo {} | sed -e \'s/^.* //g\')
+                else
+                    git diff --color --no-index /dev/null (echo {} | sed -e "s/^.* //g") # untracked
+                end' | \
+            awk -F ' ' '{print $NF}'
+        )
 
     if test -n "$selected"
         git add $selected
@@ -57,39 +58,30 @@ function fuzzy-fixup
     end
 end
 
-## find file and open in tig
-function find-file-and-open-in-tig
+## fuzzy find file and open in tig
+function fuzzy-find-file-and-open-in-tig
     set -l filename (fd -t f | fzf --preview "bat --style=numbers --color=always {}")
     if test -n "$filename"
         tig "$filename"
     end
 end
-alias ft=find-file-and-open-in-tig
+alias ft=fuzzy-find-file-and-open-in-tig
 
-## grep file and open in tig
-function grep-file-and-open-in-tig
+## fuzzy grep file and open in tig
+function fuzzy-grep-file-and-open-in-tig
     set -l filename (grep-preview 'git grep -i --color=always --line-number ')
     if test -n "$filename"
         tig "$filename"
     end
 end
-alias gt=grep-file-and-open-in-tig
+alias gt=fuzzy-grep-file-and-open-in-tig
 
-## fuzzy branch select
-function branch-select
-    env FZF_DEFAULT_COMMAND='git --no-pager branch -a | grep -v HEAD | sed -e "s/^.* //g"' \
-        fzf --height 70% --prompt "BRANCH NAME>" \
-            --preview "git --no-pager log -20 --color=always {}"
+## fuzzy checkout branch
+function fuzzy-checkout-branch
+    set -l branchname (
+        env FZF_DEFAULT_COMMAND='git --no-pager branch -a | grep -v HEAD | sed -e "s/^.* //g"' \
+            fzf --height 70% --prompt "BRANCH NAME>" \
+                --preview "git --no-pager log -20 --color=always {}"
+    )
+    git checkout (echo "$branchname"| sed "s#remotes/[^/]*/##")
 end
-
-## checkout branch
-function checkout-branch
-    set -l branchname (branch-select)
-    if string match -q "remotes/*" "$branchname"
-        set branchname ( echo "$branchname" | sed "s#remotes/[^/]*/##" )
-    end
-    if test -n "$branchname"
-        git checkout "$branchname"
-    end
-end
-alias co=checkout-branch

@@ -21,9 +21,9 @@ function grep-preview
     [ -n "$argv[2]" ]; and set initial_query "$argv[2]"; or set initial_query ""
 
     env FZF_DEFAULT_COMMAND="$grep_command '$initial_query'" \
-      fzf --bind "change:reload:eval '$grep_command' \"{q}\" || true" \
-          --height 70% --disabled --query "$initial_query" --preview "preview.sh {}" \
-      | awk -F: '{print $1}'
+        fzf --bind "change:reload:$grep_command {q} || true" \
+            --height 70% --disabled --query "$initial_query" --preview "preview.sh {}" | \
+        awk -F: '{print $1}'
 end
 
 ## file preview
