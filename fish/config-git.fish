@@ -45,6 +45,18 @@ function fuzzy-add
         git add $selected
     end
 end
+
+## fuzzy fixup
+function fuzzy-fixup
+    set -l commitId ( env FZF_DEFAULT_COMMAND='git log --oneline -n 30' \
+        fzf --no-sort --height 70% --prompt "Search>" \
+            --preview 'git show --color=always ( echo {} | cut -d " " -f 1 )' | cut -d " " -f 1 )
+
+    if test -n "$commitId"
+        git commit --no-verify --fixup "$commitId"
+    end
+end
+
 ## find file and open in tig
 function find-file-and-open-in-tig
     set -l filename (fd -t f | fzf --preview "bat --style=numbers --color=always {}")

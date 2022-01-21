@@ -44,6 +44,7 @@
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	fadd = !fish -c "fuzzy-add"
 	fbranch = !fish -c "checkout-branch"
+	ffixup = !fish -c "fuzzy-fixup"
 [browse-remote "github.com"]
 	top = https://{host}/{path}
 	ref = https://{host}/{path}/tree/{short_ref}
