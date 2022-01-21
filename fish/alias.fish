@@ -134,3 +134,16 @@ function fuzzy-tree-select
     sed -e "s/ ->.*\$//g" | # symbolic link \
     sed -e "s/[^\.]*\././"
 end
+
+## fuzzy docker container name select
+function fuzzy-docker-continer-name-select
+    commandline -i (env FZF_DEFAULT_COMMAND="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.RunningFor}}\t{{.Ports}}\t{{.Networks}}'" \
+        fzf --no-sort --height 100% --bind='p:toggle-preview' --preview-window=down:70% \
+            --preview '
+                set -l containername (echo {} | awk -F " " \'{print $2}\');
+                if test "$containername" != "ID"
+                    docker logs --tail 300 $containername
+                end
+            ' | \
+        awk -F " " '{print $2}')
+end
