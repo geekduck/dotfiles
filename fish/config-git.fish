@@ -25,6 +25,26 @@ function gp
     git grep -i --break $argv[1] -- $argv[2]
 end
 
+## fuzzy add
+function fuzzy-add
+    set -l selected ( env FZF_DEFAULT_COMMAND='git status -s' \
+                fzf -m --no-sort --height 60% --preview '
+                    if test (echo {} | grep -E "^M" | wc -l) -eq 1 # staged
+                        git diff --color --cached (echo {} | sed -e "s/^.* //g")
+                    else if test (echo {} | grep -E "^\?\?" | wc -l) -eq 0 # unstaged
+                        git diff --color (echo {} | sed -e \'s/^.* //g\')
+                    else if test -d (echo {} | sed -e "s/^.* //g") # directory
+                        ls -la (echo {} | sed -e \'s/^.* //g\')
+                    else
+                        git diff --color --no-index /dev/null (echo {} | sed -e "s/^.* //g") # untracked
+                    end
+                ' | \
+                awk -F ' ' '{print $NF}' )
+
+    if test -n "$selected"
+        git add $selected
+    end
+end
 ## find file and open in tig
 function find-file-and-open-in-tig
     set -l filename (fd -t f | fzf --preview "bat --style=numbers --color=always {}")
