@@ -119,3 +119,18 @@ function done_enter
     end
     commandline -f repaint
 end
+
+## fuzzy tree select
+function fuzzy-tree-select
+    env FZF_DEFAULT_COMMAND="tree --charset=o -N -C -a -f -I '.git|.git_template|.idea|node_modules|.DS_Store' | sed -e '\$d' | sed -e '\$d'" \
+        fzf --no-sort --height 70% --preview '
+            set -l target (echo {} | sed -e "s/[^\.]*\././");
+            if test -d $target
+                ls -al $target
+            else if test -f $target
+                preview.sh $target
+            else
+            end' | \
+    sed -e "s/ ->.*\$//g" | # symbolic link \
+    sed -e "s/[^\.]*\././"
+end
