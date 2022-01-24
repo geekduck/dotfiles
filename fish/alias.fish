@@ -111,7 +111,8 @@ end
 
 ## empty enter
 function done_enter
-    if test -z (commandline)
+    set -l inputstring (commandline) # commandlineを直接 test -z で評価すると複数行ある場合にエラーになる
+    if test -z "$inputstring"
         echo
         __show_current_dir_and_git_status
     else
