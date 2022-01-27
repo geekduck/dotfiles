@@ -83,5 +83,7 @@ function fuzzy-checkout-branch
             fzf --height 70% --prompt "BRANCH NAME>" \
                 --preview "git --no-pager log -20 --color=always {}"
     )
-    git checkout (echo "$branchname"| sed "s#remotes/[^/]*/##")
+    if test -n "$branchname"
+        git checkout (echo "$branchname"| sed "s#remotes/[^/]*/##")
+    end
 end
