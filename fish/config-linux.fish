@@ -8,12 +8,6 @@ if [ -d "$HOME/.rbenv" ]
     status --is-interactive; and source (rbenv init -|psub)
 end
 
-# volta
-if [ -d "$HOME/.volta" ]
-    set -gx VOLTA_HOME "$HOME/.volta"
-    set -gx PATH "$VOLTA_HOME/bin" $PATH
-end
-
 # plenv
 if [ -d "$HOME/.plenv" ]
     set -x PATH $HOME/.plenv/bin $PATH
