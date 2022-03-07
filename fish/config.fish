@@ -20,7 +20,7 @@ set -x LSCOLORS ExFxCxDxBxegedabagacad
 ## fuzzy finder
 set -x FZF_DEFAULT_COMMAND "fd -t f"
 set -x FZF_DEFAULT_OPTS "--color fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#778899 --height 40% --layout=reverse-list --border --ansi "
-set -x FZF_CTRL_T_OPTS "--preview 'preview.sh {}'"
+set -x FZF_CTRL_T_OPTS "--preview 'preview.sh {} 2> /dev/null  || ls -al {}'"
 set -x FZF_ALT_C_OPTS "--preview 'ls -al {}'"
 
 ## ghq
