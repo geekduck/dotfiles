@@ -30,9 +30,16 @@ end
 alias find-preview='fzf --height 70% --preview "preview.sh {}"'
 
 ## simple server(require python3)
-function server
-    python -m http.server $argv
+if which python > /dev/null
+    function server
+        python -m http.server $argv
+    end
+else if which python3 > /dev/null
+    function server
+        python3 -m http.server $argv
+    end
 end
+
 
 function safe-rm
     if test "$argv[1]" = "-rf"; or test "$argv[1]" = "-fr"
